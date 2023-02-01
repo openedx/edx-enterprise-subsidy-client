@@ -1,0 +1,12 @@
+[run]
+branch = True
+data_file = .coverage
+source=edx_enterprise_subsidy_client
+omit =
+    test_settings
+
+[html]
+directory = build/coverage/html
+
+[xml]
+output = build/coverage/coverage.xml
