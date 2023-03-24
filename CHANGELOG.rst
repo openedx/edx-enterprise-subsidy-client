@@ -15,6 +15,10 @@ Unreleased
 **********
 None.
 
+[0.2.1]
+*******
+* Be flexible about settings variable names for client initialization.
+
 [0.2.0]
 *******
 * Add implementation for many of the client methods; currently defering on unit tests.
