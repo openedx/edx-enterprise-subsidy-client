@@ -13,11 +13,15 @@ Change Log
 
 Unreleased
 **********
+None.
 
-*
+[0.2.0]
+*******
+* Add implementation for many of the client methods; currently defering on unit tests.
+* Add a ``scripts/e2e.py`` script for end-to-end testing between enterprise-subsidy and edx-enterprise.
 
 [0.1.0] - 2023-02-01
-************************************************
+********************
 
 Added
 =====

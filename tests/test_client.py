@@ -32,7 +32,7 @@ def test_client_fetch_subsidy_content_data_success(
     mock_oauth_client.return_value.get.return_value = MockResponse(mocked_data, 200)
     subsidy_service_client = EnterpriseSubsidyAPIClient()
     response = subsidy_service_client.get_subsidy_content_data(
-        enterprise_uuid='6d3ad134-8004-43b3-ad56-c57c83e4ea21',
+        enterprise_customer_uuid='6d3ad134-8004-43b3-ad56-c57c83e4ea21',
         content_identifier=course_key
     )
     assert response == mocked_data
