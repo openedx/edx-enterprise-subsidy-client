@@ -1,14 +1,32 @@
 """
 API client for interacting with the enterprise-subsidy service.
 """
+from collections import OrderedDict
 import logging
-from urllib.parse import urljoin
 
 import requests
 from django.conf import settings
 from edx_rest_api_client.client import OAuthAPIClient
 
 logger = logging.getLogger(__name__)
+
+
+# Be a little flexible about the settings variables
+# we can use to initialize the OAuthAPIClient.
+VALID_SETTING_NAMES = OrderedDict({
+    'base_url': [
+        'OAUTH2_PROVIDER_URL',
+        'ENTERPRISE_BACKEND_SERVICE_EDX_OAUTH2_PROVIDER_URL',
+    ],
+    'client_id': [
+        'BACKEND_SERVICE_EDX_OAUTH2_KEY',
+        'ENTERPRISE_BACKEND_SERVICE_EDX_OAUTH2_KEY',
+    ],
+    'client_secret': [
+        'BACKEND_SERVICE_EDX_OAUTH2_SECRET',
+        'ENTERPRISE_BACKEND_SERVICE_EDX_OAUTH2_SECRET',
+    ],
+})
 
 
 class EnterpriseSubsidyAPIClient:
@@ -21,7 +39,6 @@ class EnterpriseSubsidyAPIClient:
     ENTERPRISE_BACKEND_SERVICE_EDX_OAUTH2_SECRET=your-services-application-secret
     ENTERPRISE_SUBSIDY_URL=enterprise-subsidy-service-base-url
     """
-
     API_BASE_URL = settings.ENTERPRISE_SUBSIDY_URL.strip('/') + '/api/v1/'
     SUBSIDIES_ENDPOINT = API_BASE_URL + 'subsidies/'
     TRANSACTIONS_ENDPOINT = API_BASE_URL + 'transactions/'
@@ -31,11 +48,13 @@ class EnterpriseSubsidyAPIClient:
         """
         Initializes the OAuthAPIClient instance.
         """
-        self.client = OAuthAPIClient(
-            settings.ENTERPRISE_BACKEND_SERVICE_EDX_OAUTH2_PROVIDER_URL.strip('/'),
-            settings.ENTERPRISE_BACKEND_SERVICE_EDX_OAUTH2_KEY,
-            settings.ENTERPRISE_BACKEND_SERVICE_EDX_OAUTH2_SECRET,
-        )
+        oauth_client_kwargs = {}
+
+        for client_key, allowed_names in VALID_SETTING_NAMES.items():
+            for name in allowed_names:
+                if settings_value := getattr(settings, name, None):
+                    oauth_client_kwargs[client_key] = settings_value
+        self.client = OAuthAPIClient(**oauth_client_kwargs)
 
     def get_content_metadata_url(self, content_identifier):
         """Helper method to generate the subsidy service metadata API url."""
@@ -117,7 +136,9 @@ class EnterpriseSubsidyAPIClient:
         return response.json()
 
     def list_subsidy_transactions(
-        self, subsidy_uuid, include_aggregates=True, lms_user_id=None, content_key=None
+        self, subsidy_uuid, include_aggregates=True,
+        lms_user_id=None, content_key=None,
+        subsidy_access_policy_uuid=None,
     ):
         """
         TODO: add docstring.
@@ -129,7 +150,9 @@ class EnterpriseSubsidyAPIClient:
             query_params['lms_user_id'] = lms_user_id
         if content_key:
             query_params['content_key'] = content_key
-      
+        if subsidy_access_policy_uuid:
+            query_params['subsidy_access_policy_uuid'] = subsidy_access_policy_uuid
+
         response = self.client.get(
             self.TRANSACTIONS_ENDPOINT,
             params=query_params,
