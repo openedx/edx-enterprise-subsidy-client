@@ -77,6 +77,12 @@ test-all: quality ## run tests on every supported Python/Django combination
 
 validate: quality test ## run tests and quality checks
 
+isort-check:
+	isort --check-only --diff --recursive tests test_utils edx_enterprise_subsidy_client *.py test_settings.py
+
+isort:
+	isort --recursive tests test_utils edx_enterprise_subsidy_client *.py test_settings.py
+
 isort-fix:
 	isort --recursive tests test_utils edx_enterprise_subsidy_client *.py test_settings.py
 
