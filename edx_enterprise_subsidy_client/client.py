@@ -1,8 +1,8 @@
 """
 API client for interacting with the enterprise-subsidy service.
 """
-from collections import OrderedDict
 import logging
+from collections import OrderedDict
 
 import requests
 from django.conf import settings
@@ -151,7 +151,7 @@ class EnterpriseSubsidyAPIClient:
         if content_key:
             query_params['content_key'] = content_key
         if subsidy_access_policy_uuid:
-            query_params['subsidy_access_policy_uuid'] = subsidy_access_policy_uuid
+            query_params['subsidy_access_policy_uuid'] = str(subsidy_access_policy_uuid)
 
         response = self.client.get(
             self.TRANSACTIONS_ENDPOINT,
@@ -175,16 +175,15 @@ class EnterpriseSubsidyAPIClient:
         TODO: add docstring.
         """
         request_payload = {
-            'subsidy_uuid': subsidy_uuid,
+            'subsidy_uuid': str(subsidy_uuid),
             'learner_id': lms_user_id,
             'content_key': content_key,
-            'subsidy_access_policy_uuid': subsidy_access_policy_uuid,
+            'subsidy_access_policy_uuid': str(subsidy_access_policy_uuid),
         }
         response = self.client.post(
             self.TRANSACTIONS_ENDPOINT,
             json=request_payload,
         )
-        print(response.json())
         response.raise_for_status()
         return response.json()
 

@@ -15,6 +15,11 @@ Unreleased
 **********
 None.
 
+[0.2.2]
+*******
+* str() incoming UUID arguments
+
+
 [0.2.1]
 *******
 * Be flexible about settings variable names for client initialization.
