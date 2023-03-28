@@ -40,7 +40,7 @@ ROOT_URLCONF = 'edx_rest_api_client.urls'
 
 SECRET_KEY = 'insecure-secret-key'
 
-ENTERPRISE_BACKEND_SERVICE_EDX_OAUTH2_PROVIDER_URL = 'backend-service-oauth-provider-url'
-ENTERPRISE_BACKEND_SERVICE_EDX_OAUTH2_KEY = 'your-services-application-key'
-ENTERPRISE_BACKEND_SERVICE_EDX_OAUTH2_SECRET = 'your-services-application-secret'
+OAUTH2_PROVIDER_URL = 'backend-service-oauth-provider-url'
+BACKEND_SERVICE_EDX_OAUTH2_KEY = 'your-services-application-key'
+BACKEND_SERVICE_EDX_OAUTH2_SECRET = 'your-services-application-secret'
 ENTERPRISE_SUBSIDY_URL = 'enterprise-subsidy-service-base-url'
