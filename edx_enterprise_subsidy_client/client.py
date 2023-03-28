@@ -2,7 +2,6 @@
 API client for interacting with the enterprise-subsidy service.
 """
 import logging
-from collections import OrderedDict
 
 import requests
 from django.conf import settings
@@ -11,32 +10,14 @@ from edx_rest_api_client.client import OAuthAPIClient
 logger = logging.getLogger(__name__)
 
 
-# Be a little flexible about the settings variables
-# we can use to initialize the OAuthAPIClient.
-VALID_SETTING_NAMES = OrderedDict({
-    'base_url': [
-        'OAUTH2_PROVIDER_URL',
-        'ENTERPRISE_BACKEND_SERVICE_EDX_OAUTH2_PROVIDER_URL',
-    ],
-    'client_id': [
-        'BACKEND_SERVICE_EDX_OAUTH2_KEY',
-        'ENTERPRISE_BACKEND_SERVICE_EDX_OAUTH2_KEY',
-    ],
-    'client_secret': [
-        'BACKEND_SERVICE_EDX_OAUTH2_SECRET',
-        'ENTERPRISE_BACKEND_SERVICE_EDX_OAUTH2_SECRET',
-    ],
-})
-
-
 class EnterpriseSubsidyAPIClient:
     """
     API client for calls to the enterprise-subsidy service.
 
     To use this within your service, ensure the service's settings contain the following vars:
-    ENTERPRISE_BACKEND_SERVICE_EDX_OAUTH2_PROVIDER_URL=backend-service-oauth-provider-url
-    ENTERPRISE_BACKEND_SERVICE_EDX_OAUTH2_KEY=your-services-application-key
-    ENTERPRISE_BACKEND_SERVICE_EDX_OAUTH2_SECRET=your-services-application-secret
+    OAUTH2_PROVIDER_URL=backend-service-oauth-provider-url
+    BACKEND_SERVICE_EDX_OAUTH2_KEY=your-services-application-key
+    BACKEND_SERVICE_EDX_OAUTH2_SECRET=your-services-application-secret
     ENTERPRISE_SUBSIDY_URL=enterprise-subsidy-service-base-url
     """
     API_BASE_URL = settings.ENTERPRISE_SUBSIDY_URL.strip('/') + '/api/v1/'
@@ -48,13 +29,11 @@ class EnterpriseSubsidyAPIClient:
         """
         Initializes the OAuthAPIClient instance.
         """
-        oauth_client_kwargs = {}
-
-        for client_key, allowed_names in VALID_SETTING_NAMES.items():
-            for name in allowed_names:
-                if settings_value := getattr(settings, name, None):
-                    oauth_client_kwargs[client_key] = settings_value
-        self.client = OAuthAPIClient(**oauth_client_kwargs)
+        self.client = OAuthAPIClient(
+            settings.OAUTH2_PROVIDER_URL,
+            settings.BACKEND_SERVICE_EDX_OAUTH2_KEY,
+            settings.BACKEND_SERVICE_EDX_OAUTH2_SECRET,
+        )
 
     def get_content_metadata_url(self, content_identifier):
         """Helper method to generate the subsidy service metadata API url."""
