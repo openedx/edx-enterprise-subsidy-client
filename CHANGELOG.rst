@@ -15,6 +15,10 @@ Unreleased
 **********
 None.
 
+[0.2.4]
+*******
+* fix: don't directly access a status code on a failed response for logging.
+
 [0.2.3]
 *******
 * DON'T be flexible about settings variable names for client initialization.

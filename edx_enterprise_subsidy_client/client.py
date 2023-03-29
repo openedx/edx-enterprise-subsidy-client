@@ -63,8 +63,10 @@ class EnterpriseSubsidyAPIClient:
             response_data = resp
             resp.raise_for_status()
         except requests.exceptions.HTTPError as exc:
-            if exc.request.status_code == 404:
-                logger.error('Failed to fetch subsidy data- 404 content not found')
+            logger.exception(
+                f'Subsidy client failed to fetch content metadata for {content_identifier} '
+                f'in customer {enterprise_customer_uuid}'
+            )
             raise exc
         return response_data.json()
 
