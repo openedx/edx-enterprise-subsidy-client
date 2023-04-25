@@ -157,7 +157,7 @@ class EnterpriseSubsidyAPIClient:
         """
         request_payload = {
             'subsidy_uuid': str(subsidy_uuid),
-            'learner_id': lms_user_id,
+            'lms_user_id': lms_user_id,
             'content_key': content_key,
             'subsidy_access_policy_uuid': str(subsidy_access_policy_uuid),
             'metadata': metadata,
