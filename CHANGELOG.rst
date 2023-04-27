@@ -17,6 +17,10 @@ Unreleased
 * Switch from ``edx-sphinx-theme`` to ``sphinx-book-theme`` since the former is
   deprecated
 
+[0.2.6]
+*******
+* feat: transaction endpoint accepts `lms_user_id` instead of `learner_id`
+
 [0.2.5]
 *******
 * feat: redemption metadata.
