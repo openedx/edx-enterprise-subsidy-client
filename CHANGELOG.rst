@@ -15,6 +15,10 @@ Unreleased
 **********
 None.
 
+[0.2.5]
+*******
+* feat: redemption metadata.
+
 [0.2.4]
 *******
 * fix: don't directly access a status code on a failed response for logging.
