@@ -151,7 +151,7 @@ class EnterpriseSubsidyAPIClient:
         response.raise_for_status()
         return response.json()
 
-    def create_subsidy_transaction(self, subsidy_uuid, lms_user_id, content_key, subsidy_access_policy_uuid):
+    def create_subsidy_transaction(self, subsidy_uuid, lms_user_id, content_key, subsidy_access_policy_uuid, metadata):
         """
         TODO: add docstring.
         """
@@ -160,6 +160,7 @@ class EnterpriseSubsidyAPIClient:
             'learner_id': lms_user_id,
             'content_key': content_key,
             'subsidy_access_policy_uuid': str(subsidy_access_policy_uuid),
+            'metadata': metadata,
         }
         response = self.client.post(
             self.TRANSACTIONS_ENDPOINT,
