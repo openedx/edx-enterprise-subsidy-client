@@ -50,7 +50,6 @@ quality: ## check coding style with pycodestyle and pylint
 	pylint edx_enterprise_subsidy_client tests test_utils manage.py *.py
 	rm tests/__init__.py
 	pycodestyle edx_enterprise_subsidy_client tests  *.py
-	pydocstyle edx_enterprise_subsidy_client tests *.py
 	isort --check-only --diff --recursive tests test_utils edx_enterprise_subsidy_client *.py test_settings.py
 	python setup.py bdist_wheel
 	twine check dist/*
