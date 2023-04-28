@@ -17,6 +17,10 @@ Unreleased
 * Switch from ``edx-sphinx-theme`` to ``sphinx-book-theme`` since the former is
   deprecated
 
+[0.3.0]
+*******
+* feat: add new client for v2 transaction endpoint.
+
 [0.2.6]
 *******
 * feat: transaction endpoint accepts `lms_user_id` instead of `learner_id`
