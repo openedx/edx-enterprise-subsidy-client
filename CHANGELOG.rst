@@ -17,6 +17,10 @@ Unreleased
 * Switch from ``edx-sphinx-theme`` to ``sphinx-book-theme`` since the former is
   deprecated
 
+[0.3.1]
+*******
+* fix: correctly pass ``subsidy_uuid`` to subsidy API V2 endpoint string format.
+
 [0.3.0]
 *******
 * feat: add new client for v2 transaction endpoint.
