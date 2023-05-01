@@ -223,7 +223,7 @@ class EnterpriseSubsidyAPIClientV2(EnterpriseSubsidyAPIClient):  # pylint: disab
     ENTERPRISE_SUBSIDY_URL=enterprise-subsidy-service-base-url
     """
     V2_BASE_URL = EnterpriseSubsidyAPIClient.API_BASE_URL + 'v2/'
-    TRANSACTIONS_LIST_ENDPOINT = V2_BASE_URL + 'subsidies/{subsidy_uuid}/transactions/'
+    TRANSACTIONS_LIST_ENDPOINT = V2_BASE_URL + 'subsidies/{subsidy_uuid}/admin/transactions/'
 
     def list_subsidy_transactions(
         self, subsidy_uuid, include_aggregates=True,
@@ -244,7 +244,7 @@ class EnterpriseSubsidyAPIClientV2(EnterpriseSubsidyAPIClient):  # pylint: disab
             query_params['subsidy_access_policy_uuid'] = str(subsidy_access_policy_uuid)
 
         response = self.client.get(
-            self.TRANSACTIONS_LIST_ENDPOINT.format(subsidy_uuid),
+            self.TRANSACTIONS_LIST_ENDPOINT.format(subsidy_uuid=subsidy_uuid),
             params=query_params,
         )
         response.raise_for_status()
@@ -262,7 +262,7 @@ class EnterpriseSubsidyAPIClientV2(EnterpriseSubsidyAPIClient):  # pylint: disab
             'metadata': metadata,
         }
         response = self.client.post(
-            self.TRANSACTIONS_LIST_ENDPOINT.format(subsidy_uuid),
+            self.TRANSACTIONS_LIST_ENDPOINT.format(subsidy_uuid=subsidy_uuid),
             json=request_payload,
         )
         response.raise_for_status()
