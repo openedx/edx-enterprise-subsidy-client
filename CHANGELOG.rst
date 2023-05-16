@@ -17,6 +17,11 @@ Unreleased
 * Switch from ``edx-sphinx-theme`` to ``sphinx-book-theme`` since the former is
   deprecated
 
+[0.3.2]
+*******
+* admin-list transactions will ask to be filtered for only `committed` and `pending` states by default.
+  Caller may specify other valid states (e.g. `failed` or `created`).
+
 [0.3.1]
 *******
 * fix: correctly pass ``subsidy_uuid`` to subsidy API V2 endpoint string format.
