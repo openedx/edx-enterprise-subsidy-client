@@ -10,6 +10,24 @@ from edx_rest_api_client.client import OAuthAPIClient
 logger = logging.getLogger(__name__)
 
 
+class TransactionStateChoices:
+    """
+    Lifecycle states for a ledger transaction.
+    """
+
+    CREATED = 'created'
+    PENDING = 'pending'
+    COMMITTED = 'committed'
+    FAILED = 'failed'
+
+    VALID_CHOICES = {
+        CREATED,
+        PENDING,
+        COMMITTED,
+        FAILED,
+    }
+
+
 class EnterpriseSubsidyAPIClientException(Exception):
     """
     A general exception to represent non-http errors
@@ -228,12 +246,14 @@ class EnterpriseSubsidyAPIClientV2(EnterpriseSubsidyAPIClient):  # pylint: disab
     def list_subsidy_transactions(
         self, subsidy_uuid, include_aggregates=True,
         lms_user_id=None, content_key=None,
-        subsidy_access_policy_uuid=None,
+        subsidy_access_policy_uuid=None, transaction_states=None,
     ):
         """
         List transactions in a subsidy with admin- or operator-level permissions.
         """
-        query_params = {}
+        query_params = {
+            'state': [TransactionStateChoices.COMMITTED, TransactionStateChoices.PENDING],
+        }
         if include_aggregates:
             query_params['include_aggregates'] = include_aggregates
         if lms_user_id:
@@ -242,6 +262,12 @@ class EnterpriseSubsidyAPIClientV2(EnterpriseSubsidyAPIClient):  # pylint: disab
             query_params['content_key'] = content_key
         if subsidy_access_policy_uuid:
             query_params['subsidy_access_policy_uuid'] = str(subsidy_access_policy_uuid)
+        if transaction_states:
+            valid_states = [
+                state for state in transaction_states
+                if state in TransactionStateChoices.VALID_CHOICES
+            ]
+            query_params['state'] = valid_states
 
         response = self.client.get(
             self.TRANSACTIONS_LIST_ENDPOINT.format(subsidy_uuid=subsidy_uuid),
