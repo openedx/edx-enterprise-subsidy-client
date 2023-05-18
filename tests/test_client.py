@@ -62,22 +62,33 @@ def test_v2_list_subsidy_transactions(
 
     subsidy_service_client = EnterpriseSubsidyAPIClientV2()
 
-    response = subsidy_service_client.list_subsidy_transactions(
-        subsidy_uuid=subsidy_uuid,
-        lms_user_id=lms_user_id,
-        content_key=content_key,
-        subsidy_access_policy_uuid=subsidy_access_policy_uuid,
-        transaction_states=['committed', 'pending', 'district-of-columbia'],
-    )
+    data_driven_test = [
+        (
+            {'transaction_states': ['committed', 'pending', 'district-of-columbia']},
+            ['committed', 'pending'],
+        ),
+        (
+            {},
+            ['committed', 'pending', 'created'],
+        ),
+    ]
+    for state_kwargs, expected_state_call_param in data_driven_test:
+        response = subsidy_service_client.list_subsidy_transactions(
+            subsidy_uuid=subsidy_uuid,
+            lms_user_id=lms_user_id,
+            content_key=content_key,
+            subsidy_access_policy_uuid=subsidy_access_policy_uuid,
+            **state_kwargs,
+        )
 
-    assert response == mocked_response_data
-    mock_oauth_client.return_value.get.assert_called_once_with(
-        f'enterprise-subsidy-service-base-url/api/v2/subsidies/{subsidy_uuid}/admin/transactions/',
-        params={
-            'state': ['committed', 'pending'],
-            'include_aggregates': True,
-            'lms_user_id': 123,
-            'content_key': 'the-best-content',
-            'subsidy_access_policy_uuid': str(subsidy_access_policy_uuid),
-        },
-    )
+        assert response == mocked_response_data
+        mock_oauth_client.return_value.get.assert_called_with(
+            f'enterprise-subsidy-service-base-url/api/v2/subsidies/{subsidy_uuid}/admin/transactions/',
+            params={
+                'state': expected_state_call_param,
+                'include_aggregates': True,
+                'lms_user_id': 123,
+                'content_key': 'the-best-content',
+                'subsidy_access_policy_uuid': str(subsidy_access_policy_uuid),
+            },
+        )

@@ -74,8 +74,8 @@ class EnterpriseSubsidyAPIClient:
         )
 
     def get_content_metadata_url(self, content_identifier):
-        """Helper method to generate the subsidy service metadata API url."""
-        return self.CONTENT_METADATA_ENDPOINT + content_identifier
+        """Helper method to generate the subsidy service metadata API url, with a trailing slash."""
+        return self.CONTENT_METADATA_ENDPOINT + content_identifier + '/'
 
     def get_subsidy_content_data(self, enterprise_customer_uuid, content_identifier):
         """
@@ -252,7 +252,11 @@ class EnterpriseSubsidyAPIClientV2(EnterpriseSubsidyAPIClient):  # pylint: disab
         List transactions in a subsidy with admin- or operator-level permissions.
         """
         query_params = {
-            'state': [TransactionStateChoices.COMMITTED, TransactionStateChoices.PENDING],
+            'state': [
+                TransactionStateChoices.COMMITTED,
+                TransactionStateChoices.PENDING,
+                TransactionStateChoices.CREATED,
+            ],
         }
         if include_aggregates:
             query_params['include_aggregates'] = include_aggregates
