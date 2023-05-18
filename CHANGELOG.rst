@@ -17,6 +17,11 @@ Unreleased
 * Switch from ``edx-sphinx-theme`` to ``sphinx-book-theme`` since the former is
   deprecated
 
+[0.3.3]
+*******
+* admin-list transactions will also be filtered by ``created`` state by default.
+* Adds an ADR explaining the default states for which this client filters transactions.
+
 [0.3.2]
 *******
 * admin-list transactions will ask to be filtered for only `committed` and `pending` states by default.
