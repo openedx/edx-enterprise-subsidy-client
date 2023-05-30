@@ -108,7 +108,7 @@ class EnterpriseSubsidyAPIClient:
             raise exc
         return response_data.json()
 
-    def list_subsidies(self, enterprise_customer_uuid):
+    def list_subsidies(self, enterprise_customer_uuid, **kwargs):
         """
         Client method to list enterprise subsidy records for the given enterprise_customer_uuid.
 
@@ -137,9 +137,11 @@ class EnterpriseSubsidyAPIClient:
               }
             ```
         """
+        query_params = {'enterprise_customer_uuid': enterprise_customer_uuid}
+        query_params.update(kwargs)
         response = self.client.get(
             self.SUBSIDIES_ENDPOINT,
-            params={'enterprise_customer_uuid': enterprise_customer_uuid}
+            params=query_params,
         )
         response.raise_for_status()
         return response.json()
@@ -158,11 +160,13 @@ class EnterpriseSubsidyAPIClient:
         self, subsidy_uuid, include_aggregates=True,
         lms_user_id=None, content_key=None,
         subsidy_access_policy_uuid=None,
+        **kwargs
     ):
         """
         TODO: add docstring.
         """
         query_params = {'subsidy_uuid': subsidy_uuid}
+        query_params.update(kwargs)
         if include_aggregates:
             query_params['include_aggregates'] = include_aggregates
         if lms_user_id:
@@ -247,6 +251,7 @@ class EnterpriseSubsidyAPIClientV2(EnterpriseSubsidyAPIClient):  # pylint: disab
         self, subsidy_uuid, include_aggregates=True,
         lms_user_id=None, content_key=None,
         subsidy_access_policy_uuid=None, transaction_states=None,
+        **kwargs,
     ):
         """
         List transactions in a subsidy with admin- or operator-level permissions.
@@ -258,6 +263,7 @@ class EnterpriseSubsidyAPIClientV2(EnterpriseSubsidyAPIClient):  # pylint: disab
                 TransactionStateChoices.CREATED,
             ],
         }
+        query_params.update(kwargs)
         if include_aggregates:
             query_params['include_aggregates'] = include_aggregates
         if lms_user_id:
