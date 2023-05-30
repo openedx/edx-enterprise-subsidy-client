@@ -17,6 +17,10 @@ Unreleased
 * Switch from ``edx-sphinx-theme`` to ``sphinx-book-theme`` since the former is
   deprecated
 
+[0.3.5]
+*******
+* feat: pass idempotency key during transaction creation
+
 [0.3.3]
 *******
 * allow additional query params, like ``page_size``, to be passed through to listing endpoints.

@@ -286,9 +286,26 @@ class EnterpriseSubsidyAPIClientV2(EnterpriseSubsidyAPIClient):  # pylint: disab
         response.raise_for_status()
         return response.json()
 
-    def create_subsidy_transaction(self, subsidy_uuid, lms_user_id, content_key, subsidy_access_policy_uuid, metadata):
+    def create_subsidy_transaction(
+        self,
+        subsidy_uuid,
+        lms_user_id,
+        content_key,
+        subsidy_access_policy_uuid,
+        metadata,
+        idempotency_key=None,
+    ):
         """
         Creates a transaction in the given subsidy, requires operator-level permissions.
+
+        Raises:
+            requests.exceptions.HTTPError:
+                - 403 Forbidden: If auth failed.
+                - 429 Too Many Requests: If the ledger was locked (resource contention, try again later).
+                - 422 Unprocessable Entity: Catchall status for anything that prevented the transaction from being
+                  created.  Reasons include, but are not limited to:
+                      * Redemption of the given content_key would have exceeded the ledger balance.
+                      * The given content_key is not in any catalog for this customer.
         """
         request_payload = {
             'subsidy_uuid': str(subsidy_uuid),
@@ -297,6 +314,8 @@ class EnterpriseSubsidyAPIClientV2(EnterpriseSubsidyAPIClient):  # pylint: disab
             'subsidy_access_policy_uuid': str(subsidy_access_policy_uuid),
             'metadata': metadata,
         }
+        if idempotency_key:
+            request_payload['idempotency_key'] = idempotency_key
         response = self.client.post(
             self.TRANSACTIONS_LIST_ENDPOINT.format(subsidy_uuid=subsidy_uuid),
             json=request_payload,
