@@ -19,6 +19,10 @@ Unreleased
 
 [0.3.3]
 *******
+* allow additional query params, like ``page_size``, to be passed through to listing endpoints.
+
+[0.3.3]
+*******
 * admin-list transactions will also be filtered by ``created`` state by default.
 * Adds an ADR explaining the default states for which this client filters transactions.
 

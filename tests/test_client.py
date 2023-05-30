@@ -64,21 +64,24 @@ def test_v2_list_subsidy_transactions(
 
     data_driven_test = [
         (
-            {'transaction_states': ['committed', 'pending', 'district-of-columbia']},
+            {
+                'page_size': 1,
+                'transaction_states': ['committed', 'pending', 'district-of-columbia'],
+            },
             ['committed', 'pending'],
         ),
         (
-            {},
+            {'page_size': 1},
             ['committed', 'pending', 'created'],
         ),
     ]
-    for state_kwargs, expected_state_call_param in data_driven_test:
+    for kwargs, expected_state_call_param in data_driven_test:
         response = subsidy_service_client.list_subsidy_transactions(
             subsidy_uuid=subsidy_uuid,
             lms_user_id=lms_user_id,
             content_key=content_key,
             subsidy_access_policy_uuid=subsidy_access_policy_uuid,
-            **state_kwargs,
+            **kwargs,
         )
 
         assert response == mocked_response_data
@@ -90,5 +93,6 @@ def test_v2_list_subsidy_transactions(
                 'lms_user_id': 123,
                 'content_key': 'the-best-content',
                 'subsidy_access_policy_uuid': str(subsidy_access_policy_uuid),
+                'page_size': 1,
             },
         )
