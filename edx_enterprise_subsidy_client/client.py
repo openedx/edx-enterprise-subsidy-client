@@ -193,7 +193,15 @@ class EnterpriseSubsidyAPIClient:
         response.raise_for_status()
         return response.json()
 
-    def create_subsidy_transaction(self, subsidy_uuid, lms_user_id, content_key, subsidy_access_policy_uuid, metadata):
+    def create_subsidy_transaction(
+        self,
+        subsidy_uuid,
+        lms_user_id,
+        content_key,
+        subsidy_access_policy_uuid,
+        metadata,
+        idempotency_key=None,
+    ):
         """
         TODO: add docstring.
         """
@@ -204,6 +212,8 @@ class EnterpriseSubsidyAPIClient:
             'subsidy_access_policy_uuid': str(subsidy_access_policy_uuid),
             'metadata': metadata,
         }
+        if idempotency_key:
+            request_payload['idempotency_key'] = idempotency_key
         response = self.client.post(
             self.TRANSACTIONS_ENDPOINT,
             json=request_payload,
