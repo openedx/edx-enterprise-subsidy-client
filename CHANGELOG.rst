@@ -17,9 +17,12 @@ Unreleased
 * Switch from ``edx-sphinx-theme`` to ``sphinx-book-theme`` since the former is
   deprecated
 
+[0.3.7]
+*******
+* feat: upgrade many python dependencies, notably Django 3.2.19
+
 [0.3.6]
 *******
-
 * feat: pass idempotency key during transaction creation (pt. 2)
 
 [0.3.5]
