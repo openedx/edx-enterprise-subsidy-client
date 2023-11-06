@@ -16,7 +16,7 @@ cffi==1.16.0
     # via
     #   -r requirements/base.txt
     #   pynacl
-charset-normalizer==3.3.1
+charset-normalizer==3.3.2
     # via
     #   -r requirements/base.txt
     #   requests
@@ -28,7 +28,7 @@ coverage[toml]==7.3.2
     # via
     #   coverage
     #   pytest-cov
-django==3.2.22
+django==3.2.23
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.txt
@@ -43,7 +43,7 @@ django-waffle==4.0.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-edx-django-utils==5.7.0
+edx-django-utils==5.8.0
     # via
     #   -r requirements/base.txt
     #   edx-rest-api-client
@@ -85,7 +85,7 @@ pynacl==1.5.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-pytest==7.4.2
+pytest==7.4.3
     # via pytest-cov
 pytest-cov==4.1.0
     # via -r requirements/test.in
