@@ -17,6 +17,10 @@ Unreleased
 * Switch from ``edx-sphinx-theme`` to ``sphinx-book-theme`` since the former is
   deprecated
 
+[0.4.0]
+*******
+* feat: allow requested prices for v2 transaction creation.
+
 [0.3.7]
 *******
 * feat: upgrade many python dependencies, notably Django 3.2.19

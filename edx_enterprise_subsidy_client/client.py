@@ -304,6 +304,7 @@ class EnterpriseSubsidyAPIClientV2(EnterpriseSubsidyAPIClient):  # pylint: disab
         subsidy_access_policy_uuid,
         metadata,
         idempotency_key=None,
+        requested_price_cents=None,
     ):
         """
         Creates a transaction in the given subsidy, requires operator-level permissions.
@@ -324,8 +325,10 @@ class EnterpriseSubsidyAPIClientV2(EnterpriseSubsidyAPIClient):  # pylint: disab
             'subsidy_access_policy_uuid': str(subsidy_access_policy_uuid),
             'metadata': metadata,
         }
-        if idempotency_key:
+        if idempotency_key is not None:
             request_payload['idempotency_key'] = idempotency_key
+        if requested_price_cents is not None:
+            request_payload['requested_price_cents'] = requested_price_cents
         response = self.client.post(
             self.TRANSACTIONS_LIST_ENDPOINT.format(subsidy_uuid=subsidy_uuid),
             json=request_payload,
