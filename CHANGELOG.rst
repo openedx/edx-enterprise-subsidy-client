@@ -17,6 +17,10 @@ Unreleased
 * Switch from ``edx-sphinx-theme`` to ``sphinx-book-theme`` since the former is
   deprecated
 
+[0.4.1]
+*******
+* chore: add a unit test for ``create_subsidy_transaction()``.
+
 [0.4.0]
 *******
 * feat: allow requested prices for v2 transaction creation.
