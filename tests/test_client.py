@@ -17,9 +17,7 @@ def test_client_init():
 
 
 @mock.patch('edx_enterprise_subsidy_client.client.OAuthAPIClient', return_value=mock.MagicMock())
-def test_client_fetch_subsidy_content_data_success(
-    mock_oauth_client,
-):
+def test_client_fetch_subsidy_content_data_success(mock_oauth_client):
     """
     Test the client's ability to handle api requests to fetch subsidy content metadata from the subsidy service
     """
@@ -40,9 +38,50 @@ def test_client_fetch_subsidy_content_data_success(
 
 
 @mock.patch('edx_enterprise_subsidy_client.client.OAuthAPIClient', return_value=mock.MagicMock())
-def test_v2_list_subsidy_transactions(
-    mock_oauth_client,
-):
+def test_client_v2_create_subsidy_transaction(mock_oauth_client):
+    """
+    Test the client's ability to create subsidy transactions.
+    """
+    mocked_data = {
+        'uuid': str(uuid.uuid4()),
+        'state': 'committed',
+        'other': 'stuff',
+    }
+    mock_post = mock_oauth_client.return_value.post
+    mock_post.return_value = MockResponse(mocked_data, 201)
+
+    subsidy_service_client = EnterpriseSubsidyAPIClientV2()
+
+    payload = {
+        'subsidy_uuid': uuid.uuid4(),
+        'lms_user_id': 47,
+        'content_key': 'demo-x',
+        'subsidy_access_policy_uuid': uuid.uuid4(),
+        'metadata': {'key': 'value'},
+        'idempotency_key': 'hello',
+        'requested_price_cents': 123,
+    }
+
+    response = subsidy_service_client.create_subsidy_transaction(**payload)
+
+    assert response == mocked_data
+    expected_url = EnterpriseSubsidyAPIClientV2.TRANSACTIONS_LIST_ENDPOINT.format(
+        subsidy_uuid=payload['subsidy_uuid'],
+    )
+    expected_post_payload = {
+        'subsidy_uuid': str(payload['subsidy_uuid']),
+        'lms_user_id': 47,
+        'content_key': 'demo-x',
+        'subsidy_access_policy_uuid': str(payload['subsidy_access_policy_uuid']),
+        'metadata': {'key': 'value'},
+        'idempotency_key': 'hello',
+        'requested_price_cents': 123,
+    }
+    mock_post.assert_called_once_with(expected_url, json=expected_post_payload)
+
+
+@mock.patch('edx_enterprise_subsidy_client.client.OAuthAPIClient', return_value=mock.MagicMock())
+def test_v2_list_subsidy_transactions(mock_oauth_client):
     """
     Test the v2 client's ability to make API requests to the admin/transactions list view.
     Really just tests some method signatures.
