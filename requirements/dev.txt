@@ -383,6 +383,7 @@ virtualenv==20.25.1
 wheel==0.43.0
     # via
     #   -r requirements/pip-tools.txt
+    #   -r requirements/quality.txt
     #   pip-tools
 zipp==3.18.0
     # via

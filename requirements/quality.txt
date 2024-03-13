@@ -245,6 +245,8 @@ urllib3==2.2.1
     #   -r requirements/test.txt
     #   requests
     #   twine
+wheel==0.43.0
+    # via -r requirements/quality.in
 zipp==3.18.0
     # via
     #   importlib-metadata
