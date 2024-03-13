@@ -121,3 +121,6 @@ urllib3==2.2.1
     # via
     #   -r requirements/base.txt
     #   requests
+
+# The following packages are considered to be unsafe in a requirements file:
+# setuptools
