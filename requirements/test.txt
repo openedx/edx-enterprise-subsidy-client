@@ -28,7 +28,7 @@ click==8.1.7
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-coverage[toml]==7.4.3
+coverage[toml]==7.4.4
     # via pytest-cov
 django==4.2.11
     # via
@@ -59,7 +59,7 @@ idna==3.6
     #   requests
 iniconfig==2.0.0
     # via pytest
-newrelic==9.7.0
+newrelic==9.7.1
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
