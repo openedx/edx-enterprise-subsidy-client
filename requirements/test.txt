@@ -8,8 +8,9 @@ asgiref==3.7.2
     # via
     #   -r requirements/base.txt
     #   django
-backports-zoneinfo==0.2.1
+backports-zoneinfo==0.2.1 ; python_version < "3.9"
     # via
+    #   -c requirements/constraints.txt
     #   -r requirements/base.txt
     #   django
 certifi==2024.2.2
@@ -59,7 +60,7 @@ idna==3.6
     #   requests
 iniconfig==2.0.0
     # via pytest
-newrelic==9.7.0
+newrelic==9.7.1
     # via
     #   -r requirements/base.txt
     #   edx-django-utils

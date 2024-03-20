@@ -14,8 +14,11 @@ Change Log
 Unreleased
 **********
 
+[0.4.2]
+*******
 * Switch from ``edx-sphinx-theme`` to ``sphinx-book-theme`` since the former is
   deprecated
+* Add python 3.12 support
 
 [0.4.1]
 *******
