@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-asgiref==3.7.2
+asgiref==3.8.1
     # via
     #   -r requirements/test.txt
     #   django
@@ -39,9 +39,9 @@ click==8.1.7
     #   edx-lint
 click-log==0.4.0
     # via edx-lint
-code-annotations==1.6.0
+code-annotations==1.7.0
     # via edx-lint
-coverage[toml]==7.4.3
+coverage[toml]==7.4.4
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -66,7 +66,7 @@ django-waffle==4.1.0
     #   edx-django-utils
 docutils==0.20.1
     # via readme-renderer
-edx-django-utils==5.11.0
+edx-django-utils==5.12.0
     # via
     #   -r requirements/test.txt
     #   edx-rest-api-client
@@ -87,7 +87,7 @@ importlib-metadata==6.11.0
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   keyring
     #   twine
-importlib-resources==6.3.0
+importlib-resources==6.4.0
     # via keyring
 iniconfig==2.0.0
     # via
@@ -97,7 +97,11 @@ isort==5.13.2
     # via
     #   -r requirements/quality.in
     #   pylint
-jaraco-classes==3.3.1
+jaraco-classes==3.4.0
+    # via keyring
+jaraco-context==4.3.0
+    # via keyring
+jaraco-functools==4.0.0
     # via keyring
 jeepney==0.8.0
     # via
@@ -105,7 +109,7 @@ jeepney==0.8.0
     #   secretstorage
 jinja2==3.1.3
     # via code-annotations
-keyring==24.3.1
+keyring==25.0.0
     # via twine
 markdown-it-py==3.0.0
     # via rich
@@ -116,12 +120,14 @@ mccabe==0.7.0
 mdurl==0.1.2
     # via markdown-it-py
 more-itertools==10.2.0
-    # via jaraco-classes
-newrelic==9.7.1
+    # via
+    #   jaraco-classes
+    #   jaraco-functools
+newrelic==9.8.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-nh3==0.2.15
+nh3==0.2.17
     # via readme-renderer
 packaging==24.0
     # via
@@ -145,7 +151,7 @@ psutil==5.9.8
     #   edx-django-utils
 pycodestyle==2.11.1
     # via -r requirements/quality.in
-pycparser==2.21
+pycparser==2.22
     # via
     #   -r requirements/test.txt
     #   cffi
@@ -181,7 +187,7 @@ pytest==8.1.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-pytest-cov==4.1.0
+pytest-cov==5.0.0
     # via -r requirements/test.txt
 python-slugify==8.0.4
     # via code-annotations
@@ -245,7 +251,7 @@ urllib3==2.2.1
     #   -r requirements/test.txt
     #   requests
     #   twine
-zipp==3.18.0
+zipp==3.18.1
     # via
     #   importlib-metadata
     #   importlib-resources
