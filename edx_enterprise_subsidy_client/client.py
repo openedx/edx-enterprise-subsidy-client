@@ -73,6 +73,41 @@ class EnterpriseSubsidyAPIClient:
             settings.BACKEND_SERVICE_EDX_OAUTH2_SECRET,
         )
 
+    def get_subsidy_aggregates_by_learner_url(self, subsidy_uuid):
+        """
+        Helper method to fetch subsidy learner aggregate data API url.
+        """
+        return f"{self.SUBSIDIES_ENDPOINT}{subsidy_uuid}/aggregates-by-learner"
+
+    def get_subsidy_aggregates_by_learner_data(self, subsidy_uuid, policy_uuid=None):
+        """
+        Client method to fetch subsidy specific learner aggregate data.
+
+        Args:
+            subsidy_uuid (str): Subsidy record UUID
+            policy_uuid (string): Optional param to filter subsidy aggregate data by subsidy access policy UUID
+        Returns:
+            json subsidy learner aggregate data response:
+                [{
+                    'lms_user_id': '1337',
+                    'enrollment_count': 45,
+                } ... ]
+        """
+        url = self.get_subsidy_aggregates_by_learner_url(subsidy_uuid)
+        if policy_uuid:
+            url += f"?subsidy_access_policy_uuid={policy_uuid}"
+        try:
+            resp = self.client.get(url)
+            response_data = resp
+            resp.raise_for_status()
+        except requests.exceptions.HTTPError as exc:
+            logger.exception(
+                f'Subsidy client failed to fetch aggregate data for {subsidy_uuid} '
+                f'and policy: {policy_uuid}'
+            )
+            raise exc
+        return response_data.json()
+
     def get_content_metadata_url(self, content_identifier):
         """Helper method to generate the subsidy service metadata API url, with a trailing slash."""
         return self.CONTENT_METADATA_ENDPOINT + content_identifier + '/'
