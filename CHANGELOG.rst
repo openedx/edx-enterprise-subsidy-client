@@ -14,6 +14,10 @@ Change Log
 Unreleased
 **********
 
+[0.4.3]
+*******
+* feat: adding new subsidy client method to fetch subsidy aggregate data
+
 [0.4.2]
 *******
 * Switch from ``edx-sphinx-theme`` to ``sphinx-book-theme`` since the former is

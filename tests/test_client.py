@@ -4,6 +4,9 @@ Tests for edx_enterprise_subsidy_client.py.
 import uuid
 from unittest import mock
 
+import requests
+from pytest import raises
+
 from edx_enterprise_subsidy_client import EnterpriseSubsidyAPIClient, EnterpriseSubsidyAPIClientV2
 from test_utils.utils import MockResponse
 
@@ -14,6 +17,40 @@ def test_client_init():
     """
     subsidy_client = EnterpriseSubsidyAPIClient()
     assert subsidy_client is not None
+
+
+@mock.patch('edx_enterprise_subsidy_client.client.OAuthAPIClient', return_value=mock.MagicMock())
+def test_client_fetch_subsidy_aggregate_data_success(mock_oauth_client):
+    """
+    Test the client's ability to handle api requests to fetch subsidy learner aggregate data from the subsidy service
+    """
+    mocked_data = {
+        'lms_user_id': '1337',
+        'enrollment_count': 10,
+    }
+    mock_oauth_client.return_value.get.return_value = MockResponse(mocked_data, 200)
+    subsidy_service_client = EnterpriseSubsidyAPIClient()
+    response = subsidy_service_client.get_subsidy_aggregates_by_learner_data(
+        subsidy_uuid=str(uuid.uuid4()),
+    )
+    assert response == mocked_data
+
+
+@mock.patch('edx_enterprise_subsidy_client.client.OAuthAPIClient', return_value=mock.MagicMock())
+def test_client_fetch_subsidy_aggregate_data_exception_handling(mock_oauth_client):
+    """
+    Test the client's ability to properly throw errors when the subsidy service returns an error response.
+    """
+    error_message = 'some_error_string'
+    mock_oauth_client.return_value.get.return_value = MockResponse(error_message, 400)
+    subsidy_service_client = EnterpriseSubsidyAPIClient()
+    with raises(requests.exceptions.HTTPError) as exc:
+        subsidy_service_client.get_subsidy_aggregates_by_learner_data(
+            subsidy_uuid=str(uuid.uuid4()),
+        )
+
+    assert exc.value.response.json() == error_message
+    assert exc.value.response.status_code == 400
 
 
 @mock.patch('edx_enterprise_subsidy_client.client.OAuthAPIClient', return_value=mock.MagicMock())
