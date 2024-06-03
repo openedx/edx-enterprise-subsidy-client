@@ -13,7 +13,7 @@ backports-zoneinfo==0.2.1 ; python_version < "3.9"
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
     #   django
-certifi==2024.2.2
+certifi==2024.6.2
     # via
     #   -r requirements/base.txt
     #   requests
@@ -29,7 +29,7 @@ click==8.1.7
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-coverage[toml]==7.5.1
+coverage[toml]==7.5.3
     # via pytest-cov
 django==4.2.13
     # via
@@ -46,7 +46,7 @@ django-waffle==4.1.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-edx-django-utils==5.13.0
+edx-django-utils==5.14.2
     # via
     #   -r requirements/base.txt
     #   edx-rest-api-client
@@ -60,7 +60,7 @@ idna==3.7
     #   requests
 iniconfig==2.0.0
     # via pytest
-newrelic==9.9.0
+newrelic==9.10.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -88,7 +88,7 @@ pynacl==1.5.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-pytest==8.2.0
+pytest==8.2.1
     # via pytest-cov
 pytest-cov==5.0.0
     # via -r requirements/test.in
@@ -113,7 +113,7 @@ tomli==2.0.1
     # via
     #   coverage
     #   pytest
-typing-extensions==4.11.0
+typing-extensions==4.12.1
     # via
     #   -r requirements/base.txt
     #   asgiref
