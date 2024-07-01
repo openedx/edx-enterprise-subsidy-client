@@ -8,18 +8,18 @@ asgiref==3.8.1
     # via
     #   -r requirements/test.txt
     #   django
-astroid==3.1.0
+astroid==3.2.2
     # via
     #   pylint
     #   pylint-celery
-backports-tarfile==1.1.1
+backports-tarfile==1.2.0
     # via jaraco-context
 backports-zoneinfo==0.2.1 ; python_version < "3.9"
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/test.txt
     #   django
-certifi==2024.2.2
+certifi==2024.6.2
     # via
     #   -r requirements/test.txt
     #   requests
@@ -43,11 +43,11 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==1.8.0
     # via edx-lint
-coverage[toml]==7.5.1
+coverage[toml]==7.5.4
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-cryptography==42.0.7
+cryptography==42.0.8
     # via secretstorage
 dill==0.3.8
     # via pylint
@@ -68,13 +68,13 @@ django-waffle==4.1.0
     #   edx-django-utils
 docutils==0.20.1
     # via readme-renderer
-edx-django-utils==5.13.0
+edx-django-utils==5.14.2
     # via
     #   -r requirements/test.txt
     #   edx-rest-api-client
 edx-lint==5.3.6
     # via -r requirements/quality.in
-edx-rest-api-client==5.7.0
+edx-rest-api-client==5.7.1
     # via -r requirements/test.txt
 exceptiongroup==1.2.1
     # via
@@ -111,7 +111,7 @@ jeepney==0.8.0
     #   secretstorage
 jinja2==3.1.4
     # via code-annotations
-keyring==25.2.0
+keyring==25.2.1
     # via twine
 markdown-it-py==3.0.0
     # via rich
@@ -121,17 +121,17 @@ mccabe==0.7.0
     # via pylint
 mdurl==0.1.2
     # via markdown-it-py
-more-itertools==10.2.0
+more-itertools==10.3.0
     # via
     #   jaraco-classes
     #   jaraco-functools
-newrelic==9.9.0
+newrelic==9.11.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
 nh3==0.2.17
     # via readme-renderer
-packaging==24.0
+packaging==24.1
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -141,17 +141,17 @@ pbr==6.0.0
     #   stevedore
 pkginfo==1.10.0
     # via twine
-platformdirs==4.2.1
+platformdirs==4.2.2
     # via pylint
 pluggy==1.5.0
     # via
     #   -r requirements/test.txt
     #   pytest
-psutil==5.9.8
+psutil==6.0.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-pycodestyle==2.11.1
+pycodestyle==2.12.0
     # via -r requirements/quality.in
 pycparser==2.22
     # via
@@ -167,7 +167,7 @@ pyjwt==2.8.0
     # via
     #   -r requirements/test.txt
     #   edx-rest-api-client
-pylint==3.1.0
+pylint==3.2.5
     # via
     #   edx-lint
     #   pylint-celery
@@ -185,7 +185,7 @@ pynacl==1.5.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-pytest==8.2.0
+pytest==8.2.2
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -197,7 +197,7 @@ pyyaml==6.0.1
     # via code-annotations
 readme-renderer==43.0
     # via twine
-requests==2.31.0
+requests==2.32.3
     # via
     #   -r requirements/test.txt
     #   edx-rest-api-client
@@ -239,21 +239,21 @@ tomli==2.0.1
     #   pytest
 tomlkit==0.12.5
     # via pylint
-twine==5.0.0
+twine==5.1.1
     # via -r requirements/quality.in
-typing-extensions==4.11.0
+typing-extensions==4.12.2
     # via
     #   -r requirements/test.txt
     #   asgiref
     #   astroid
     #   pylint
     #   rich
-urllib3==2.2.1
+urllib3==2.2.2
     # via
     #   -r requirements/test.txt
     #   requests
     #   twine
-zipp==3.18.1
+zipp==3.19.2
     # via
     #   importlib-metadata
     #   importlib-resources
