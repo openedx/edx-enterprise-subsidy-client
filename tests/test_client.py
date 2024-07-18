@@ -172,3 +172,41 @@ def test_v2_list_subsidy_transactions(mock_oauth_client):
                 'page_size': 1,
             },
         )
+
+
+@mock.patch('edx_enterprise_subsidy_client.client.OAuthAPIClient', return_value=mock.MagicMock())
+def test_client_v2_create_subsidy_deposit(mock_oauth_client):
+    """
+    Test the client's ability to create subsidy deposits.
+    """
+    mocked_data = {
+        'uuid': str(uuid.uuid4()),
+    }
+    mock_post = mock_oauth_client.return_value.post
+    mock_post.return_value = MockResponse(mocked_data, 201)
+
+    subsidy_service_client = EnterpriseSubsidyAPIClientV2()
+
+    payload = {
+        'subsidy_uuid': uuid.uuid4(),
+        'desired_deposit_quantity': 100,
+        'sales_contract_reference_id': str(uuid.uuid4()),
+        'sales_contract_reference_provider': 'foo-bar',
+        'idempotency_key': 'hello',
+        'metadata': {'key': 'value'},
+    }
+
+    response = subsidy_service_client.create_subsidy_deposit(**payload)
+
+    assert response == mocked_data
+    expected_url = EnterpriseSubsidyAPIClientV2.DEPOSITS_CREATE_ENDPOINT.format(
+        subsidy_uuid=payload['subsidy_uuid'],
+    )
+    expected_post_payload = {
+        'desired_deposit_quantity': 100,
+        'sales_contract_reference_id': payload['sales_contract_reference_id'],
+        'sales_contract_reference_provider': 'foo-bar',
+        'idempotency_key': 'hello',
+        'metadata': {'key': 'value'},
+    }
+    mock_post.assert_called_once_with(expected_url, json=expected_post_payload)
