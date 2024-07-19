@@ -291,6 +291,7 @@ class EnterpriseSubsidyAPIClientV2(EnterpriseSubsidyAPIClient):  # pylint: disab
     """
     V2_BASE_URL = EnterpriseSubsidyAPIClient.API_BASE_URL + 'v2/'
     TRANSACTIONS_LIST_ENDPOINT = V2_BASE_URL + 'subsidies/{subsidy_uuid}/admin/transactions/'
+    DEPOSITS_CREATE_ENDPOINT = V2_BASE_URL + 'subsidies/{subsidy_uuid}/admin/deposits/'
 
     def list_subsidy_transactions(
         self, subsidy_uuid, include_aggregates=True,
@@ -366,6 +367,45 @@ class EnterpriseSubsidyAPIClientV2(EnterpriseSubsidyAPIClient):  # pylint: disab
             request_payload['requested_price_cents'] = requested_price_cents
         response = self.client.post(
             self.TRANSACTIONS_LIST_ENDPOINT.format(subsidy_uuid=subsidy_uuid),
+            json=request_payload,
+        )
+        response.raise_for_status()
+        return response.json()
+
+    def create_subsidy_deposit(
+        self,
+        subsidy_uuid,
+        desired_deposit_quantity,
+        sales_contract_reference_id,
+        sales_contract_reference_provider,
+        metadata,
+        idempotency_key=None,
+    ):
+        """
+        Creates a deposit in the given subsidy, requires operator-level permissions.
+
+        Raises:
+            requests.exceptions.HTTPError:
+                - 403 Forbidden: If auth failed.
+                - 429 Too Many Requests: If the ledger was locked (resource contention, try again later).
+                - 400 Bad Request: If any of the values were invalid. Reasons include:
+                      * non-positive quantity.
+                      * provider slug does not exist in database.
+                - 422 Unprocessable Entity: Catchall status for anything that prevented the deposit from being
+                  created.  Reasons include, but are not limited to:
+                      * Subsidy is inactive.
+                      * Another deposit with same idempotency_key already exists.
+        """
+        request_payload = {
+            'desired_deposit_quantity': desired_deposit_quantity,
+            'sales_contract_reference_id': sales_contract_reference_id,
+            'sales_contract_reference_provider': sales_contract_reference_provider,
+            'metadata': metadata,
+        }
+        if idempotency_key is not None:
+            request_payload['idempotency_key'] = idempotency_key
+        response = self.client.post(
+            self.DEPOSITS_CREATE_ENDPOINT.format(subsidy_uuid=subsidy_uuid),
             json=request_payload,
         )
         response.raise_for_status()

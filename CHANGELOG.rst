@@ -14,6 +14,10 @@ Change Log
 Unreleased
 **********
 
+[0.4.4]
+*******
+* feat: add support for deposit creation (ENT-9133)
+
 [0.4.3]
 *******
 * feat: adding new subsidy client method to fetch subsidy aggregate data
