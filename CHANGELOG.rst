@@ -14,6 +14,10 @@ Change Log
 Unreleased
 **********
 
+[0.4.5]
+*******
+* fix: create_subsidy_deposit - metadata is optional (ENT-9133)
+
 [0.4.4]
 *******
 * feat: add support for deposit creation (ENT-9133)
