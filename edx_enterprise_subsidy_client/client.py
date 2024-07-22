@@ -378,7 +378,7 @@ class EnterpriseSubsidyAPIClientV2(EnterpriseSubsidyAPIClient):  # pylint: disab
         desired_deposit_quantity,
         sales_contract_reference_id,
         sales_contract_reference_provider,
-        metadata,
+        metadata=None,
         idempotency_key=None,
     ):
         """
@@ -400,8 +400,9 @@ class EnterpriseSubsidyAPIClientV2(EnterpriseSubsidyAPIClient):  # pylint: disab
             'desired_deposit_quantity': desired_deposit_quantity,
             'sales_contract_reference_id': sales_contract_reference_id,
             'sales_contract_reference_provider': sales_contract_reference_provider,
-            'metadata': metadata,
         }
+        if metadata is not None:
+            request_payload['metadata'] = metadata
         if idempotency_key is not None:
             request_payload['idempotency_key'] = idempotency_key
         response = self.client.post(
