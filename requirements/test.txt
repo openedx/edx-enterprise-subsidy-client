@@ -13,7 +13,7 @@ backports-zoneinfo==0.2.1 ; python_version < "3.9"
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
     #   django
-certifi==2024.2.2
+certifi==2024.7.4
     # via
     #   -r requirements/base.txt
     #   requests
@@ -29,9 +29,9 @@ click==8.1.7
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-coverage[toml]==7.5.1
+coverage[toml]==7.6.0
     # via pytest-cov
-django==4.2.13
+django==4.2.14
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.txt
@@ -46,13 +46,13 @@ django-waffle==4.1.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-edx-django-utils==5.13.0
+edx-django-utils==5.14.2
     # via
     #   -r requirements/base.txt
     #   edx-rest-api-client
-edx-rest-api-client==5.7.0
+edx-rest-api-client==5.7.1
     # via -r requirements/base.txt
-exceptiongroup==1.2.1
+exceptiongroup==1.2.2
     # via pytest
 idna==3.7
     # via
@@ -60,11 +60,11 @@ idna==3.7
     #   requests
 iniconfig==2.0.0
     # via pytest
-newrelic==9.9.0
+newrelic==9.12.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-packaging==24.0
+packaging==24.1
     # via pytest
 pbr==6.0.0
     # via
@@ -72,7 +72,7 @@ pbr==6.0.0
     #   stevedore
 pluggy==1.5.0
     # via pytest
-psutil==5.9.8
+psutil==6.0.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -88,11 +88,11 @@ pynacl==1.5.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-pytest==8.2.0
+pytest==8.3.2
     # via pytest-cov
 pytest-cov==5.0.0
     # via -r requirements/test.in
-requests==2.31.0
+requests==2.32.3
     # via
     #   -r requirements/base.txt
     #   edx-rest-api-client
@@ -101,7 +101,7 @@ slumber==0.7.1
     # via
     #   -r requirements/base.txt
     #   edx-rest-api-client
-sqlparse==0.5.0
+sqlparse==0.5.1
     # via
     #   -r requirements/base.txt
     #   django
@@ -113,11 +113,11 @@ tomli==2.0.1
     # via
     #   coverage
     #   pytest
-typing-extensions==4.11.0
+typing-extensions==4.12.2
     # via
     #   -r requirements/base.txt
     #   asgiref
-urllib3==2.2.1
+urllib3==2.2.2
     # via
     #   -r requirements/base.txt
     #   requests
