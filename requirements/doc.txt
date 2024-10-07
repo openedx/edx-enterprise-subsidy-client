@@ -12,11 +12,11 @@ asgiref==3.8.1
     # via
     #   -r requirements/test.txt
     #   django
-babel==2.15.0
+babel==2.16.0
     # via
     #   pydata-sphinx-theme
     #   sphinx
-backports-tarfile==1.1.1
+backports-tarfile==1.2.0
     # via jaraco-context
 backports-zoneinfo==0.2.1 ; python_version < "3.9"
     # via
@@ -25,13 +25,13 @@ backports-zoneinfo==0.2.1 ; python_version < "3.9"
     #   django
 beautifulsoup4==4.12.3
     # via pydata-sphinx-theme
-build==1.2.1
+build==1.2.2.post1
     # via -r requirements/doc.in
-certifi==2024.2.2
+certifi==2024.8.30
     # via
     #   -r requirements/test.txt
     #   requests
-cffi==1.16.0
+cffi==1.17.1
     # via
     #   -r requirements/test.txt
     #   cryptography
@@ -44,13 +44,13 @@ click==8.1.7
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-coverage[toml]==7.5.1
+coverage[toml]==7.6.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-cryptography==42.0.7
+cryptography==43.0.1
     # via secretstorage
-django==4.2.13
+django==4.2.16
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/test.txt
@@ -65,7 +65,7 @@ django-waffle==4.1.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-doc8==1.1.1
+doc8==1.1.2
     # via -r requirements/doc.in
 docutils==0.19
     # via
@@ -74,30 +74,29 @@ docutils==0.19
     #   readme-renderer
     #   restructuredtext-lint
     #   sphinx
-edx-django-utils==5.13.0
+edx-django-utils==5.16.0
     # via
     #   -r requirements/test.txt
     #   edx-rest-api-client
-edx-rest-api-client==5.7.0
+edx-rest-api-client==6.0.0
     # via -r requirements/test.txt
-exceptiongroup==1.2.1
+exceptiongroup==1.2.2
     # via
     #   -r requirements/test.txt
     #   pytest
-idna==3.7
+idna==3.10
     # via
     #   -r requirements/test.txt
     #   requests
 imagesize==1.4.1
     # via sphinx
-importlib-metadata==6.11.0
+importlib-metadata==8.5.0
     # via
-    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   build
     #   keyring
     #   sphinx
     #   twine
-importlib-resources==6.4.0
+importlib-resources==6.4.5
     # via keyring
 iniconfig==2.0.0
     # via
@@ -105,9 +104,9 @@ iniconfig==2.0.0
     #   pytest
 jaraco-classes==3.4.0
     # via keyring
-jaraco-context==5.3.0
+jaraco-context==6.0.1
     # via keyring
-jaraco-functools==4.0.1
+jaraco-functools==4.1.0
     # via keyring
 jeepney==0.8.0
     # via
@@ -115,7 +114,7 @@ jeepney==0.8.0
     #   secretstorage
 jinja2==3.1.4
     # via sphinx
-keyring==25.2.0
+keyring==25.4.1
     # via twine
 markdown-it-py==3.0.0
     # via rich
@@ -123,24 +122,24 @@ markupsafe==2.1.5
     # via jinja2
 mdurl==0.1.2
     # via markdown-it-py
-more-itertools==10.2.0
+more-itertools==10.5.0
     # via
     #   jaraco-classes
     #   jaraco-functools
-newrelic==9.9.0
+newrelic==10.0.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-nh3==0.2.17
+nh3==0.2.18
     # via readme-renderer
-packaging==24.0
+packaging==24.1
     # via
     #   -r requirements/test.txt
     #   build
     #   pydata-sphinx-theme
     #   pytest
     #   sphinx
-pbr==6.0.0
+pbr==6.1.0
     # via
     #   -r requirements/test.txt
     #   stevedore
@@ -150,7 +149,7 @@ pluggy==1.5.0
     # via
     #   -r requirements/test.txt
     #   pytest
-psutil==5.9.8
+psutil==6.0.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -168,7 +167,7 @@ pygments==2.18.0
     #   readme-renderer
     #   rich
     #   sphinx
-pyjwt==2.8.0
+pyjwt==2.9.0
     # via
     #   -r requirements/test.txt
     #   edx-rest-api-client
@@ -176,24 +175,23 @@ pynacl==1.5.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-pyproject-hooks==1.1.0
+pyproject-hooks==1.2.0
     # via build
-pytest==8.2.0
+pytest==8.3.3
     # via
     #   -r requirements/test.txt
     #   pytest-cov
 pytest-cov==5.0.0
     # via -r requirements/test.txt
-pytz==2024.1
+pytz==2024.2
     # via babel
 readme-renderer==43.0
     # via twine
-requests==2.31.0
+requests==2.32.3
     # via
     #   -r requirements/test.txt
     #   edx-rest-api-client
     #   requests-toolbelt
-    #   slumber
     #   sphinx
     #   twine
 requests-toolbelt==1.0.0
@@ -202,17 +200,13 @@ restructuredtext-lint==1.4.0
     # via doc8
 rfc3986==2.0.0
     # via twine
-rich==13.7.1
+rich==13.9.2
     # via twine
 secretstorage==3.3.3
     # via keyring
-slumber==0.7.1
-    # via
-    #   -r requirements/test.txt
-    #   edx-rest-api-client
 snowballstemmer==2.2.0
     # via sphinx
-soupsieve==2.5
+soupsieve==2.6
     # via beautifulsoup4
 sphinx==6.2.1
     # via
@@ -233,36 +227,36 @@ sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
-sqlparse==0.5.0
+sqlparse==0.5.1
     # via
     #   -r requirements/test.txt
     #   django
-stevedore==5.2.0
+stevedore==5.3.0
     # via
     #   -r requirements/test.txt
     #   doc8
     #   edx-django-utils
-tomli==2.0.1
+tomli==2.0.2
     # via
     #   -r requirements/test.txt
     #   build
     #   coverage
     #   doc8
     #   pytest
-twine==5.0.0
+twine==5.1.1
     # via -r requirements/doc.in
-typing-extensions==4.11.0
+typing-extensions==4.12.2
     # via
     #   -r requirements/test.txt
     #   asgiref
     #   pydata-sphinx-theme
     #   rich
-urllib3==2.2.1
+urllib3==2.2.3
     # via
     #   -r requirements/test.txt
     #   requests
     #   twine
-zipp==3.18.1
+zipp==3.20.2
     # via
     #   importlib-metadata
     #   importlib-resources
