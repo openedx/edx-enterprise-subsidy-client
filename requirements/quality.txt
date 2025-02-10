@@ -72,7 +72,7 @@ edx-django-utils==7.1.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   edx-rest-api-client
-edx-lint==5.6.0
+edx-lint==5.3.6
     # via -r requirements/quality.in
 edx-rest-api-client==6.0.0
     # via -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
