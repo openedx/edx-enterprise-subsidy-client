@@ -14,6 +14,10 @@ Change Log
 Unreleased
 **********
 
+[0.4.6]
+*******
+* fix: Update the name of reviewers team in github flow
+
 [0.4.5]
 *******
 * fix: create_subsidy_deposit - metadata is optional (ENT-9133)
