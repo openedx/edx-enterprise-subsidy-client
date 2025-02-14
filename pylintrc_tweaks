@@ -7,3 +7,4 @@ load-plugins = edx_lint.pylint,pylint_celery
 disable+ =
     consider-using-with,
     bad-option-value,
+    too-many-positional-arguments,
