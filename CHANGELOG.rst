@@ -14,6 +14,12 @@ Change Log
 Unreleased
 **********
 
+[1.0.0]
+*******
+* fix: Remove Python 3.8 Support
+* chore: Update Python Requirements
+* chore: Update pylintrc
+
 [0.4.6]
 *******
 * fix: Update the name of reviewers team in github flow
