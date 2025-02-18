@@ -14,6 +14,12 @@ Change Log
 Unreleased
 **********
 
+[2.0.0]
+*******
+* feat: Update package version from 1.0.0 to 2.0.0
+* chore: Update Python Requirements
+* chore: Update upgrade-python-requirements to 3.12
+
 [1.0.0]
 *******
 * fix: Remove Python 3.8 Support
