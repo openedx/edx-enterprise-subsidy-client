@@ -6,80 +6,80 @@
 #
 asgiref==3.8.1
     # via
-    #   -r requirements/base.txt
+    #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   django
 certifi==2025.1.31
     # via
-    #   -r requirements/base.txt
+    #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   requests
 cffi==1.17.1
     # via
-    #   -r requirements/base.txt
+    #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   pynacl
 charset-normalizer==3.4.1
     # via
-    #   -r requirements/base.txt
+    #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   requests
 click==8.1.8
     # via
-    #   -r requirements/base.txt
+    #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   edx-django-utils
 coverage[toml]==7.6.12
     # via pytest-cov
 django==4.2.19
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
-    #   -r requirements/base.txt
+    #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   django-crum
     #   django-waffle
     #   edx-django-utils
 django-crum==0.7.9
     # via
-    #   -r requirements/base.txt
+    #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   edx-django-utils
 django-waffle==4.2.0
     # via
-    #   -r requirements/base.txt
+    #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   edx-django-utils
 edx-django-utils==7.1.0
     # via
-    #   -r requirements/base.txt
+    #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   edx-rest-api-client
 edx-rest-api-client==6.1.0
-    # via -r requirements/base.txt
+    # via -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
 idna==3.10
     # via
-    #   -r requirements/base.txt
+    #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   requests
 iniconfig==2.0.0
     # via pytest
 newrelic==10.6.0
     # via
-    #   -r requirements/base.txt
+    #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   edx-django-utils
 packaging==24.2
     # via pytest
 pbr==6.1.1
     # via
-    #   -r requirements/base.txt
+    #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   stevedore
 pluggy==1.5.0
     # via pytest
 psutil==7.0.0
     # via
-    #   -r requirements/base.txt
+    #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   edx-django-utils
 pycparser==2.22
     # via
-    #   -r requirements/base.txt
+    #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   cffi
 pyjwt==2.10.1
     # via
-    #   -r requirements/base.txt
+    #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   edx-rest-api-client
 pynacl==1.5.0
     # via
-    #   -r requirements/base.txt
+    #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   edx-django-utils
 pytest==8.3.4
     # via pytest-cov
@@ -87,20 +87,20 @@ pytest-cov==6.0.0
     # via -r requirements/test.in
 requests==2.32.3
     # via
-    #   -r requirements/base.txt
+    #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   edx-rest-api-client
 sqlparse==0.5.3
     # via
-    #   -r requirements/base.txt
+    #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   django
 stevedore==5.4.0
     # via
-    #   -r requirements/base.txt
+    #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   edx-django-utils
 urllib3==2.2.3
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
-    #   -r requirements/base.txt
+    #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   requests
 
 # The following packages are considered to be unsafe in a requirements file:
