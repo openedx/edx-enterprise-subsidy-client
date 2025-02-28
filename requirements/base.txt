@@ -46,7 +46,7 @@ requests==2.32.3
     # via edx-rest-api-client
 sqlparse==0.5.3
     # via django
-stevedore==5.4.0
+stevedore==5.4.1
     # via edx-django-utils
 urllib3==2.2.3
     # via
