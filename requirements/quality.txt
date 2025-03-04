@@ -40,7 +40,7 @@ coverage[toml]==7.6.12
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   pytest-cov
-cryptography==44.0.1
+cryptography==44.0.2
     # via secretstorage
 dill==0.3.9
     # via pylint
@@ -61,7 +61,7 @@ django-waffle==4.2.0
     #   edx-django-utils
 docutils==0.21.2
     # via readme-renderer
-edx-django-utils==7.1.0
+edx-django-utils==7.2.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   edx-rest-api-client
@@ -79,7 +79,7 @@ iniconfig==2.0.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   pytest
-isort==6.0.0
+isort==6.0.1
     # via
     #   -r requirements/quality.in
     #   pylint
@@ -89,7 +89,7 @@ jaraco-context==6.0.1
     # via keyring
 jaraco-functools==4.1.0
     # via keyring
-jeepney==0.8.0
+jeepney==0.9.0
     # via
     #   keyring
     #   secretstorage
@@ -113,7 +113,7 @@ newrelic==10.6.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   edx-django-utils
-nh3==0.2.20
+nh3==0.2.21
     # via readme-renderer
 packaging==24.2
     # via
@@ -168,7 +168,7 @@ pynacl==1.5.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   edx-django-utils
-pytest==8.3.4
+pytest==8.3.5
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   pytest-cov
