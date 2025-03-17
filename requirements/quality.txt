@@ -8,7 +8,7 @@ asgiref==3.8.1
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   django
-astroid==3.3.8
+astroid==3.3.9
     # via
     #   pylint
     #   pylint-celery
@@ -36,7 +36,7 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==2.2.0
     # via edx-lint
-coverage[toml]==7.6.12
+coverage[toml]==7.7.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   pytest-cov
@@ -44,7 +44,7 @@ cryptography==44.0.2
     # via secretstorage
 dill==0.3.9
     # via pylint
-django==4.2.19
+django==4.2.20
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
@@ -93,7 +93,7 @@ jeepney==0.9.0
     # via
     #   keyring
     #   secretstorage
-jinja2==3.1.5
+jinja2==3.1.6
     # via code-annotations
 keyring==25.6.0
     # via twine
@@ -109,7 +109,7 @@ more-itertools==10.6.0
     # via
     #   jaraco-classes
     #   jaraco-functools
-newrelic==10.6.0
+newrelic==10.7.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   edx-django-utils
@@ -150,7 +150,7 @@ pyjwt==2.10.1
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   edx-rest-api-client
-pylint==3.3.4
+pylint==3.3.5
     # via
     #   edx-lint
     #   pylint-celery
