@@ -24,9 +24,9 @@ click==8.1.8
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   edx-django-utils
-coverage[toml]==7.6.12
+coverage[toml]==7.7.1
     # via pytest-cov
-django==4.2.19
+django==4.2.20
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
@@ -51,9 +51,9 @@ idna==3.10
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   requests
-iniconfig==2.0.0
+iniconfig==2.1.0
     # via pytest
-newrelic==10.6.0
+newrelic==10.7.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   edx-django-utils
