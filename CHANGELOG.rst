@@ -14,6 +14,10 @@ Change Log
 Unreleased
 **********
 
+[2.0.1]
+*******
+* chore: Update Python Requirements
+
 [2.0.0]
 *******
 * feat: Update package version from 1.0.0 to 2.0.0

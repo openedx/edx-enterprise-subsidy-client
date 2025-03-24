@@ -14,7 +14,7 @@ charset-normalizer==3.4.1
     # via requests
 click==8.1.8
     # via edx-django-utils
-django==4.2.19
+django==4.2.20
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   django-crum
@@ -30,7 +30,7 @@ edx-rest-api-client==6.1.0
     # via -r requirements/base.in
 idna==3.10
     # via requests
-newrelic==10.6.0
+newrelic==10.7.0
     # via edx-django-utils
 pbr==6.1.1
     # via stevedore
