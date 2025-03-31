@@ -36,7 +36,7 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==2.2.0
     # via edx-lint
-coverage[toml]==7.7.1
+coverage[toml]==7.8.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   pytest-cov
@@ -109,7 +109,7 @@ more-itertools==10.6.0
     # via
     #   jaraco-classes
     #   jaraco-functools
-newrelic==10.7.0
+newrelic==10.8.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   edx-django-utils
@@ -134,7 +134,7 @@ psutil==7.0.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   edx-django-utils
-pycodestyle==2.12.1
+pycodestyle==2.13.0
     # via -r requirements/quality.in
 pycparser==2.22
     # via
@@ -191,7 +191,7 @@ requests-toolbelt==1.0.0
     # via twine
 rfc3986==2.0.0
     # via twine
-rich==13.9.4
+rich==14.0.0
     # via twine
 secretstorage==3.3.3
     # via keyring
