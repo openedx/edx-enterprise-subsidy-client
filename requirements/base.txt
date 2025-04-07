@@ -30,7 +30,7 @@ edx-rest-api-client==6.1.0
     # via -r requirements/base.in
 idna==3.10
     # via requests
-newrelic==10.7.0
+newrelic==10.8.1
     # via edx-django-utils
 pbr==6.1.1
     # via stevedore
