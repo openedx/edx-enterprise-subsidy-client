@@ -34,7 +34,7 @@ click==8.1.8
     #   edx-lint
 click-log==0.4.0
     # via edx-lint
-code-annotations==2.2.0
+code-annotations==2.3.0
     # via edx-lint
 coverage[toml]==7.8.0
     # via
@@ -61,13 +61,13 @@ django-waffle==4.2.0
     #   edx-django-utils
 docutils==0.21.2
     # via readme-renderer
-edx-django-utils==7.2.0
+edx-django-utils==7.4.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   edx-rest-api-client
 edx-lint==5.6.0
     # via -r requirements/quality.in
-edx-rest-api-client==6.1.0
+edx-rest-api-client==6.2.0
     # via -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
 id==1.5.0
     # via twine
@@ -109,7 +109,7 @@ more-itertools==10.6.0
     # via
     #   jaraco-classes
     #   jaraco-functools
-newrelic==10.8.1
+newrelic==10.9.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   edx-django-utils
