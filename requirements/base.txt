@@ -24,13 +24,13 @@ django-crum==0.7.9
     # via edx-django-utils
 django-waffle==4.2.0
     # via edx-django-utils
-edx-django-utils==7.2.0
+edx-django-utils==7.4.0
     # via edx-rest-api-client
-edx-rest-api-client==6.1.0
+edx-rest-api-client==6.2.0
     # via -r requirements/base.in
 idna==3.10
     # via requests
-newrelic==10.8.1
+newrelic==10.9.0
     # via edx-django-utils
 pbr==6.1.1
     # via stevedore
