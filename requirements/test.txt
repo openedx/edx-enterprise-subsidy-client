@@ -57,7 +57,7 @@ newrelic==10.9.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   edx-django-utils
-packaging==24.2
+packaging==25.0
     # via pytest
 pbr==6.1.1
     # via
