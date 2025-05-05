@@ -10,7 +10,7 @@ certifi==2025.4.26
     # via requests
 cffi==1.17.1
     # via pynacl
-charset-normalizer==3.4.1
+charset-normalizer==3.4.2
     # via requests
 click==8.1.8
     # via edx-django-utils
@@ -30,7 +30,7 @@ edx-rest-api-client==6.2.0
     # via -r requirements/base.in
 idna==3.10
     # via requests
-newrelic==10.10.0
+newrelic==10.11.0
     # via edx-django-utils
 pbr==6.1.1
     # via stevedore
