@@ -8,7 +8,7 @@ asgiref==3.8.1
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/quality.txt
     #   django
-astroid==3.3.9
+astroid==3.3.10
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/quality.txt
     #   pylint
@@ -39,7 +39,7 @@ charset-normalizer==3.4.2
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/quality.txt
     #   requests
-click==8.1.8
+click==8.2.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/pip-tools.txt
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/quality.txt
@@ -78,7 +78,7 @@ distlib==0.3.9
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/ci.txt
     #   virtualenv
-django==4.2.20
+django==4.2.21
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/quality.txt
@@ -197,7 +197,7 @@ pbr==6.1.1
     #   stevedore
 pip-tools==7.4.1
     # via -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/pip-tools.txt
-platformdirs==4.3.7
+platformdirs==4.3.8
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/ci.txt
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/quality.txt
@@ -311,7 +311,7 @@ six==1.17.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/quality.txt
     #   edx-lint
-snowballstemmer==2.2.0
+snowballstemmer==3.0.1
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/quality.txt
     #   pydocstyle
@@ -342,7 +342,7 @@ urllib3==2.2.3
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/quality.txt
     #   requests
     #   twine
-virtualenv==20.30.0
+virtualenv==20.31.2
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/ci.txt
     #   tox
