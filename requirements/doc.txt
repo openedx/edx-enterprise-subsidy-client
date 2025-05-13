@@ -33,7 +33,7 @@ charset-normalizer==3.4.2
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   requests
-click==8.1.8
+click==8.2.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   edx-django-utils
@@ -43,7 +43,7 @@ coverage[toml]==7.8.0
     #   pytest-cov
 cryptography==44.0.3
     # via secretstorage
-django==4.2.20
+django==4.2.21
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
@@ -187,7 +187,7 @@ roman-numerals-py==3.1.0
     # via sphinx
 secretstorage==3.3.3
     # via keyring
-snowballstemmer==2.2.0
+snowballstemmer==3.0.1
     # via sphinx
 soupsieve==2.7
     # via beautifulsoup4
