@@ -20,11 +20,11 @@ charset-normalizer==3.4.2
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   requests
-click==8.2.0
+click==8.2.1
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   edx-django-utils
-coverage[toml]==7.8.0
+coverage[toml]==7.8.2
     # via pytest-cov
 django==4.2.21
     # via
@@ -41,7 +41,7 @@ django-waffle==4.2.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   edx-django-utils
-edx-django-utils==7.4.0
+edx-django-utils==8.0.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   edx-rest-api-client
@@ -53,10 +53,6 @@ idna==3.10
     #   requests
 iniconfig==2.1.0
     # via pytest
-newrelic==10.12.0
-    # via
-    #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
-    #   edx-django-utils
 packaging==25.0
     # via pytest
 pbr==6.1.1

@@ -25,7 +25,7 @@ charset-normalizer==3.4.2
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   requests
-click==8.2.0
+click==8.2.1
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   click-log
@@ -36,11 +36,11 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==2.3.0
     # via edx-lint
-coverage[toml]==7.8.0
+coverage[toml]==7.8.2
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   pytest-cov
-cryptography==45.0.2
+cryptography==45.0.3
     # via secretstorage
 dill==0.4.0
     # via pylint
@@ -61,7 +61,7 @@ django-waffle==4.2.0
     #   edx-django-utils
 docutils==0.21.2
     # via readme-renderer
-edx-django-utils==7.4.0
+edx-django-utils==8.0.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   edx-rest-api-client
@@ -109,10 +109,6 @@ more-itertools==10.7.0
     # via
     #   jaraco-classes
     #   jaraco-functools
-newrelic==10.12.0
-    # via
-    #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
-    #   edx-django-utils
 nh3==0.2.21
     # via readme-renderer
 packaging==25.0
