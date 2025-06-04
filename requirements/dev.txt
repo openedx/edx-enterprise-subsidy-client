@@ -17,7 +17,7 @@ build==1.2.2.post1
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/pip-tools.txt
     #   pip-tools
-cachetools==5.5.2
+cachetools==6.0.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/ci.txt
     #   tox
@@ -39,7 +39,7 @@ charset-normalizer==3.4.2
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/quality.txt
     #   requests
-click==8.2.0
+click==8.2.1
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/pip-tools.txt
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/quality.txt
@@ -60,15 +60,15 @@ colorama==0.4.6
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/ci.txt
     #   tox
-coverage[toml]==7.8.0
+coverage[toml]==7.8.2
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/quality.txt
     #   pytest-cov
-cryptography==45.0.2
+cryptography==45.0.3
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/quality.txt
     #   secretstorage
-diff-cover==9.2.4
+diff-cover==9.3.2
     # via -r requirements/dev.in
 dill==0.4.0
     # via
@@ -97,7 +97,7 @@ docutils==0.21.2
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/quality.txt
     #   readme-renderer
-edx-django-utils==7.4.0
+edx-django-utils==8.0.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/quality.txt
     #   edx-rest-api-client
@@ -173,10 +173,6 @@ more-itertools==10.7.0
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/quality.txt
     #   jaraco-classes
     #   jaraco-functools
-newrelic==10.12.0
-    # via
-    #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/quality.txt
-    #   edx-django-utils
 nh3==0.2.21
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/quality.txt
