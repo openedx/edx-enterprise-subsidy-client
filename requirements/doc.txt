@@ -43,7 +43,7 @@ coverage[toml]==7.8.2
     #   pytest-cov
 cryptography==45.0.3
     # via secretstorage
-django==4.2.21
+django==4.2.22
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
@@ -139,9 +139,11 @@ pydata-sphinx-theme==0.15.4
     # via sphinx-book-theme
 pygments==2.19.1
     # via
+    #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   accessible-pygments
     #   doc8
     #   pydata-sphinx-theme
+    #   pytest
     #   readme-renderer
     #   rich
     #   sphinx
@@ -155,7 +157,7 @@ pynacl==1.5.0
     #   edx-django-utils
 pyproject-hooks==1.2.0
     # via build
-pytest==8.3.5
+pytest==8.4.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   pytest-cov
@@ -217,7 +219,7 @@ stevedore==5.4.1
     #   edx-django-utils
 twine==6.1.0
     # via -r requirements/doc.in
-typing-extensions==4.13.2
+typing-extensions==4.14.0
     # via
     #   beautifulsoup4
     #   pydata-sphinx-theme

@@ -26,7 +26,7 @@ click==8.2.1
     #   edx-django-utils
 coverage[toml]==7.8.2
     # via pytest-cov
-django==4.2.21
+django==4.2.22
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
@@ -69,6 +69,8 @@ pycparser==2.22
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   cffi
+pygments==2.19.1
+    # via pytest
 pyjwt==2.10.1
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
@@ -77,7 +79,7 @@ pynacl==1.5.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   edx-django-utils
-pytest==8.3.5
+pytest==8.4.0
     # via pytest-cov
 pytest-cov==6.1.1
     # via -r requirements/test.in
