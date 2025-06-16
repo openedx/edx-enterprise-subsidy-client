@@ -20,7 +20,7 @@ beautifulsoup4==4.13.4
     # via pydata-sphinx-theme
 build==1.2.2.post1
     # via -r requirements/doc.in
-certifi==2025.4.26
+certifi==2025.6.15
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   requests
@@ -37,13 +37,13 @@ click==8.2.1
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   edx-django-utils
-coverage[toml]==7.8.2
+coverage[toml]==7.9.1
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   pytest-cov
-cryptography==45.0.3
+cryptography==45.0.4
     # via secretstorage
-django==4.2.21
+django==4.2.23
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
@@ -54,11 +54,11 @@ django-crum==0.7.9
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   edx-django-utils
-django-waffle==4.2.0
+django-waffle==5.0.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   edx-django-utils
-doc8==1.1.2
+doc8==2.0.0
     # via -r requirements/doc.in
 docutils==0.21.2
     # via
@@ -127,6 +127,7 @@ pluggy==1.6.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   pytest
+    #   pytest-cov
 psutil==7.0.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
@@ -139,9 +140,11 @@ pydata-sphinx-theme==0.15.4
     # via sphinx-book-theme
 pygments==2.19.1
     # via
+    #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   accessible-pygments
     #   doc8
     #   pydata-sphinx-theme
+    #   pytest
     #   readme-renderer
     #   rich
     #   sphinx
@@ -155,15 +158,15 @@ pynacl==1.5.0
     #   edx-django-utils
 pyproject-hooks==1.2.0
     # via build
-pytest==8.3.5
+pytest==8.4.0
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   pytest-cov
-pytest-cov==6.1.1
+pytest-cov==6.2.1
     # via -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
 readme-renderer==44.0
     # via twine
-requests==2.32.3
+requests==2.32.4
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   edx-rest-api-client
@@ -217,7 +220,7 @@ stevedore==5.4.1
     #   edx-django-utils
 twine==6.1.0
     # via -r requirements/doc.in
-typing-extensions==4.13.2
+typing-extensions==4.14.0
     # via
     #   beautifulsoup4
     #   pydata-sphinx-theme
