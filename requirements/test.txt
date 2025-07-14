@@ -4,11 +4,11 @@
 #
 #    make upgrade
 #
-asgiref==3.8.1
+asgiref==3.9.1
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   django
-certifi==2025.6.15
+certifi==2025.7.9
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   requests
@@ -24,7 +24,7 @@ click==8.2.1
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/base.txt
     #   edx-django-utils
-coverage[toml]==7.9.1
+coverage[toml]==7.9.2
     # via pytest-cov
 django==4.2.23
     # via

@@ -4,15 +4,15 @@
 #
 #    make upgrade
 #
-asgiref==3.8.1
+asgiref==3.9.1
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   django
-astroid==3.3.10
+astroid==3.3.11
     # via
     #   pylint
     #   pylint-celery
-certifi==2025.6.15
+certifi==2025.7.9
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   requests
@@ -36,11 +36,11 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==2.3.0
     # via edx-lint
-coverage[toml]==7.9.1
+coverage[toml]==7.9.2
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   pytest-cov
-cryptography==45.0.4
+cryptography==45.0.5
     # via secretstorage
 dill==0.4.0
     # via pylint
