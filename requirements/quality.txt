@@ -12,7 +12,7 @@ astroid==3.3.11
     # via
     #   pylint
     #   pylint-celery
-certifi==2025.7.9
+certifi==2025.7.14
     # via
     #   -r /home/runner/work/edx-enterprise-subsidy-client/edx-enterprise-subsidy-client/requirements/test.txt
     #   requests
@@ -109,7 +109,7 @@ more-itertools==10.7.0
     # via
     #   jaraco-classes
     #   jaraco-functools
-nh3==0.2.21
+nh3==0.3.0
     # via readme-renderer
 packaging==25.0
     # via
