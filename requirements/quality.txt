@@ -36,7 +36,7 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==2.3.0
     # via edx-lint
-coverage[toml]==7.10.3
+coverage[toml]==7.10.4
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -97,7 +97,7 @@ jinja2==3.1.6
     # via code-annotations
 keyring==25.6.0
     # via twine
-markdown-it-py==3.0.0
+markdown-it-py==4.0.0
     # via rich
 markupsafe==3.0.2
     # via jinja2
@@ -116,7 +116,7 @@ packaging==25.0
     #   -r requirements/test.txt
     #   pytest
     #   twine
-pbr==6.1.1
+pbr==7.0.0
     # via
     #   -r requirements/test.txt
     #   stevedore
