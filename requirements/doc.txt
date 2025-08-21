@@ -37,7 +37,7 @@ click==8.2.1
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-coverage[toml]==7.10.3
+coverage[toml]==7.10.4
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -99,7 +99,7 @@ jinja2==3.1.6
     # via sphinx
 keyring==25.6.0
     # via twine
-markdown-it-py==3.0.0
+markdown-it-py==4.0.0
     # via rich
 markupsafe==3.0.2
     # via jinja2
@@ -119,7 +119,7 @@ packaging==25.0
     #   pytest
     #   sphinx
     #   twine
-pbr==6.1.1
+pbr==7.0.0
     # via
     #   -r requirements/test.txt
     #   stevedore
