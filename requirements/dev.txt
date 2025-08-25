@@ -60,7 +60,7 @@ colorama==0.4.6
     # via
     #   -r requirements/ci.txt
     #   tox
-coverage[toml]==7.10.4
+coverage[toml]==7.10.5
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -134,7 +134,7 @@ jaraco-context==6.0.1
     # via
     #   -r requirements/quality.txt
     #   keyring
-jaraco-functools==4.2.1
+jaraco-functools==4.3.0
     # via
     #   -r requirements/quality.txt
     #   keyring
@@ -187,7 +187,7 @@ packaging==25.0
     #   pytest
     #   tox
     #   twine
-pbr==7.0.0
+pbr==7.0.1
     # via
     #   -r requirements/quality.txt
     #   stevedore
@@ -282,7 +282,7 @@ readme-renderer==44.0
     # via
     #   -r requirements/quality.txt
     #   twine
-requests==2.32.4
+requests==2.32.5
     # via
     #   -r requirements/quality.txt
     #   edx-rest-api-client
