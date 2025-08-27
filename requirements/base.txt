@@ -30,7 +30,7 @@ edx-rest-api-client==6.2.0
     # via -r requirements/base.in
 idna==3.10
     # via requests
-pbr==7.0.0
+pbr==7.0.1
     # via stevedore
 psutil==7.0.0
     # via edx-django-utils
@@ -40,7 +40,7 @@ pyjwt==2.10.1
     # via edx-rest-api-client
 pynacl==1.5.0
     # via edx-django-utils
-requests==2.32.4
+requests==2.32.5
     # via edx-rest-api-client
 sqlparse==0.5.3
     # via django
