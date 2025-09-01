@@ -24,7 +24,7 @@ click==8.2.1
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-coverage[toml]==7.10.5
+coverage[toml]==7.10.6
     # via pytest-cov
 django==4.2.23
     # via
@@ -55,10 +55,6 @@ iniconfig==2.1.0
     # via pytest
 packaging==25.0
     # via pytest
-pbr==7.0.1
-    # via
-    #   -r requirements/base.txt
-    #   stevedore
 pluggy==1.6.0
     # via
     #   pytest
@@ -93,7 +89,7 @@ sqlparse==0.5.3
     # via
     #   -r requirements/base.txt
     #   django
-stevedore==5.4.1
+stevedore==5.5.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -101,6 +97,3 @@ urllib3==2.5.0
     # via
     #   -r requirements/base.txt
     #   requests
-
-# The following packages are considered to be unsafe in a requirements file:
-# setuptools
