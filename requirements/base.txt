@@ -12,7 +12,7 @@ cffi==2.0.0
     # via pynacl
 charset-normalizer==3.4.3
     # via requests
-click==8.2.1
+click==8.3.0
     # via edx-django-utils
 django==4.2.24
     # via
@@ -30,7 +30,7 @@ edx-rest-api-client==6.2.0
     # via -r requirements/base.in
 idna==3.10
     # via requests
-psutil==7.0.0
+psutil==7.1.0
     # via edx-django-utils
 pycparser==2.23
     # via cffi

@@ -20,11 +20,11 @@ charset-normalizer==3.4.3
     # via
     #   -r requirements/base.txt
     #   requests
-click==8.2.1
+click==8.3.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-coverage[toml]==7.10.6
+coverage[toml]==7.10.7
     # via pytest-cov
 django==4.2.24
     # via
@@ -59,7 +59,7 @@ pluggy==1.6.0
     # via
     #   pytest
     #   pytest-cov
-psutil==7.0.0
+psutil==7.1.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
