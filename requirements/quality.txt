@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-asgiref==3.9.1
+asgiref==3.10.0
     # via
     #   -r requirements/test.txt
     #   django
@@ -12,7 +12,7 @@ astroid==3.3.11
     # via
     #   pylint
     #   pylint-celery
-certifi==2025.8.3
+certifi==2025.10.5
     # via
     #   -r requirements/test.txt
     #   requests
@@ -40,13 +40,13 @@ coverage[toml]==7.10.7
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-cryptography==46.0.1
+cryptography==46.0.2
     # via secretstorage
 dill==0.4.0
     # via pylint
-django==4.2.24
+django==4.2.25
     # via
-    #   -c https:/raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
+    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/test.txt
     #   django-crum
     #   django-waffle
@@ -61,7 +61,7 @@ django-waffle==5.0.0
     #   edx-django-utils
 docutils==0.22.2
     # via readme-renderer
-edx-django-utils==8.0.0
+edx-django-utils==8.0.1
     # via
     #   -r requirements/test.txt
     #   edx-rest-api-client
@@ -79,7 +79,7 @@ iniconfig==2.1.0
     # via
     #   -r requirements/test.txt
     #   pytest
-isort==6.0.1
+isort==6.1.0
     # via
     #   -r requirements/quality.in
     #   pylint
@@ -99,7 +99,7 @@ keyring==25.6.0
     # via twine
 markdown-it-py==4.0.0
     # via rich
-markupsafe==3.0.2
+markupsafe==3.0.3
     # via jinja2
 mccabe==0.7.0
     # via pylint
@@ -145,7 +145,7 @@ pyjwt==2.10.1
     # via
     #   -r requirements/test.txt
     #   edx-rest-api-client
-pylint==3.3.8
+pylint==3.3.9
     # via
     #   edx-lint
     #   pylint-celery
@@ -171,7 +171,7 @@ pytest-cov==7.0.0
     # via -r requirements/test.txt
 python-slugify==8.0.4
     # via code-annotations
-pyyaml==6.0.2
+pyyaml==6.0.3
     # via code-annotations
 readme-renderer==44.0
     # via twine

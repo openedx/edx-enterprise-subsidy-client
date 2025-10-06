@@ -4,11 +4,11 @@
 #
 #    make upgrade
 #
-asgiref==3.9.1
+asgiref==3.10.0
     # via
     #   -r requirements/base.txt
     #   django
-certifi==2025.8.3
+certifi==2025.10.5
     # via
     #   -r requirements/base.txt
     #   requests
@@ -26,9 +26,9 @@ click==8.3.0
     #   edx-django-utils
 coverage[toml]==7.10.7
     # via pytest-cov
-django==4.2.24
+django==4.2.25
     # via
-    #   -c https:/raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
+    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.txt
     #   django-crum
     #   django-waffle
@@ -41,7 +41,7 @@ django-waffle==5.0.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-edx-django-utils==8.0.0
+edx-django-utils==8.0.1
     # via
     #   -r requirements/base.txt
     #   edx-rest-api-client
