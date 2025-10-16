@@ -47,7 +47,7 @@ edx-django-utils==8.0.1
     #   edx-rest-api-client
 edx-rest-api-client==6.2.0
     # via -r requirements/base.txt
-idna==3.10
+idna==3.11
     # via
     #   -r requirements/base.txt
     #   requests
