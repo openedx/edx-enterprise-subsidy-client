@@ -21,7 +21,7 @@ cffi==2.0.0
     #   -r requirements/test.txt
     #   cryptography
     #   pynacl
-charset-normalizer==3.4.3
+charset-normalizer==3.4.4
     # via
     #   -r requirements/test.txt
     #   requests
@@ -36,11 +36,11 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==2.3.0
     # via edx-lint
-coverage[toml]==7.10.7
+coverage[toml]==7.11.0
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-cryptography==46.0.2
+cryptography==46.0.3
     # via secretstorage
 dill==0.4.0
     # via pylint
@@ -75,7 +75,7 @@ idna==3.11
     # via
     #   -r requirements/test.txt
     #   requests
-iniconfig==2.1.0
+iniconfig==2.3.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -123,7 +123,7 @@ pluggy==1.6.0
     #   -r requirements/test.txt
     #   pytest
     #   pytest-cov
-psutil==7.1.0
+psutil==7.1.1
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
