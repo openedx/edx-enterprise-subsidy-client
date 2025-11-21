@@ -14,6 +14,10 @@ Change Log
 Unreleased
 **********
 
+[2.0.20]
+********
+* build: pin pip version to resolve pip-tools conflict
+
 [2.0.19]
 ********
 * chore: Update Python Requirements
