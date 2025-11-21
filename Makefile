@@ -2,6 +2,11 @@
         extract_translations fake_translations help \
         quality requirements selfcheck test test-all upgrade validate
 
+COMMON_CONSTRAINTS_TXT=requirements/common_constraints.txt
+.PHONY: $(COMMON_CONSTRAINTS_TXT)
+$(COMMON_CONSTRAINTS_TXT):
+	wget -O "$(@)" https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt || touch "$(@)"
+
 .DEFAULT_GOAL := help
 
 # For opening files in a browser. Use like: $(BROWSER)relative/path/to/file.html
@@ -32,7 +37,12 @@ docs: ## generate Sphinx HTML documentation, including API docs
 PIP_COMPILE = pip-compile --upgrade $(PIP_COMPILE_OPTS)
 
 upgrade: export CUSTOM_COMPILE_COMMAND=make upgrade
-upgrade: ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
+upgrade: $(COMMON_CONSTRAINTS_TXT) piptools ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
+	# Make sure to compile files after any other files they include!
+	sed 's/Django<5.0//g' requirements/common_constraints.txt > requirements/common_constraints.tmp
+	mv requirements/common_constraints.tmp requirements/common_constraints.txt
+	sed 's/django-simple-history==3.0.0//g' requirements/common_constraints.txt > requirements/common_constraints.tmp
+	mv requirements/common_constraints.tmp requirements/common_constraints.txt
 	pip install -r requirements/pip-tools.txt
 	# Make sure to compile files after any other files they include!
 	$(PIP_COMPILE) --allow-unsafe --rebuild -o requirements/pip.txt requirements/pip.in
@@ -61,7 +71,7 @@ pylint:
 
 requirements: ## install development environment requirements
 	pip install -r requirements/pip.txt
-	pip install -r requirements/pip-tools.txt
+	pip install -q -r requirements/pip_tools.txt -c requirements/constraints.txt
 	pip-sync requirements/dev.txt requirements/private.*
 
 test: clean ## run tests in the current virtualenv
