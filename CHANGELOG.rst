@@ -14,6 +14,10 @@ Change Log
 Unreleased
 **********
 
+[2.0.20]
+********
+* fix: update pip-tools to 7.5.2
+
 [2.0.19]
 ********
 * chore: Update Python Requirements
