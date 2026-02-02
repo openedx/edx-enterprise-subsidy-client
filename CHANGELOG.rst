@@ -14,6 +14,10 @@ Change Log
 Unreleased
 **********
 
+[2.1.0]
+*******
+* chore: Update Python Requirements, notably Django 5
+
 [2.0.19]
 ********
 * chore: Update Python Requirements
