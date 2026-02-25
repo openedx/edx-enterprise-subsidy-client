@@ -14,6 +14,10 @@ Change Log
 Unreleased
 **********
 
+[2.1.1]
+*******
+* build: upgrade pip-tools to version 7.5.3
+
 [2.1.0]
 *******
 * chore: Update Python Requirements, notably Django 5
