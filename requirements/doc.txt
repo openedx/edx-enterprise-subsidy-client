@@ -29,7 +29,7 @@ cffi==2.0.0
     #   -r requirements/test.txt
     #   cryptography
     #   pynacl
-charset-normalizer==3.4.4
+charset-normalizer==3.4.6
     # via
     #   -r requirements/test.txt
     #   requests
@@ -43,7 +43,7 @@ coverage[toml]==7.13.4
     #   pytest-cov
 cryptography==46.0.5
     # via secretstorage
-django==5.2.11
+django==5.2.12
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/test.txt
@@ -79,7 +79,7 @@ idna==3.11
     # via
     #   -r requirements/test.txt
     #   requests
-imagesize==1.4.1
+imagesize==2.0.0
     # via sphinx
 iniconfig==2.3.0
     # via
@@ -87,7 +87,7 @@ iniconfig==2.3.0
     #   pytest
 jaraco-classes==3.4.0
     # via keyring
-jaraco-context==6.1.0
+jaraco-context==6.1.1
     # via keyring
 jaraco-functools==4.4.0
     # via keyring
@@ -115,7 +115,6 @@ packaging==26.0
     # via
     #   -r requirements/test.txt
     #   build
-    #   pydata-sphinx-theme
     #   pytest
     #   sphinx
     #   twine
@@ -132,7 +131,7 @@ pycparser==3.0
     # via
     #   -r requirements/test.txt
     #   cffi
-pydata-sphinx-theme==0.15.4
+pydata-sphinx-theme==0.16.1
     # via sphinx-book-theme
 pygments==2.19.2
     # via
@@ -144,7 +143,7 @@ pygments==2.19.2
     #   readme-renderer
     #   rich
     #   sphinx
-pyjwt==2.11.0
+pyjwt==2.12.1
     # via
     #   -r requirements/test.txt
     #   edx-rest-api-client
@@ -190,7 +189,7 @@ sphinx==9.1.0
     #   -r requirements/doc.in
     #   pydata-sphinx-theme
     #   sphinx-book-theme
-sphinx-book-theme==1.1.4
+sphinx-book-theme==1.2.0
     # via -r requirements/doc.in
 sphinxcontrib-applehelp==2.0.0
     # via sphinx
