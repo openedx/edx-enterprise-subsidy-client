@@ -14,6 +14,8 @@ Change Log
 Unreleased
 **********
 
+* Dependency upgrades: tox 4.50.3, coverage 7.13.5; removed unused Linux keyring dependencies
+
 [2.1.1]
 *******
 * build: upgrade pip-tools to version 7.5.3
