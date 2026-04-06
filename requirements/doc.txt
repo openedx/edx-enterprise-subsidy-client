@@ -29,11 +29,11 @@ cffi==2.0.0
     #   -r requirements/test.txt
     #   cryptography
     #   pynacl
-charset-normalizer==3.4.6
+charset-normalizer==3.4.7
     # via
     #   -r requirements/test.txt
     #   requests
-click==8.3.1
+click==8.3.2
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -105,7 +105,7 @@ markupsafe==3.0.3
     # via jinja2
 mdurl==0.1.2
     # via markdown-it-py
-more-itertools==10.8.0
+more-itertools==11.0.1
     # via
     #   jaraco-classes
     #   jaraco-functools
@@ -161,7 +161,7 @@ pytest-cov==7.1.0
     # via -r requirements/test.txt
 readme-renderer==44.0
     # via twine
-requests==2.33.0
+requests==2.33.1
     # via
     #   -r requirements/test.txt
     #   edx-rest-api-client

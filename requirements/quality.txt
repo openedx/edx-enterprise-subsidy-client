@@ -21,11 +21,11 @@ cffi==2.0.0
     #   -r requirements/test.txt
     #   cryptography
     #   pynacl
-charset-normalizer==3.4.6
+charset-normalizer==3.4.7
     # via
     #   -r requirements/test.txt
     #   requests
-click==8.3.1
+click==8.3.2
     # via
     #   -r requirements/test.txt
     #   click-log
@@ -105,7 +105,7 @@ mccabe==0.7.0
     # via pylint
 mdurl==0.1.2
     # via markdown-it-py
-more-itertools==10.8.0
+more-itertools==11.0.1
     # via
     #   jaraco-classes
     #   jaraco-functools
@@ -175,7 +175,7 @@ pyyaml==6.0.3
     # via code-annotations
 readme-renderer==44.0
     # via twine
-requests==2.33.0
+requests==2.33.1
     # via
     #   -r requirements/test.txt
     #   edx-rest-api-client

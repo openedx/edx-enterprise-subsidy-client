@@ -16,11 +16,11 @@ cffi==2.0.0
     # via
     #   -r requirements/base.txt
     #   pynacl
-charset-normalizer==3.4.6
+charset-normalizer==3.4.7
     # via
     #   -r requirements/base.txt
     #   requests
-click==8.3.1
+click==8.3.2
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -81,7 +81,7 @@ pytest==9.0.2
     # via pytest-cov
 pytest-cov==7.1.0
     # via -r requirements/test.in
-requests==2.33.0
+requests==2.33.1
     # via
     #   -r requirements/base.txt
     #   edx-rest-api-client
