@@ -13,7 +13,7 @@ astroid==4.0.4
     #   -r requirements/quality.txt
     #   pylint
     #   pylint-celery
-build==1.4.2
+build==1.4.3
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
@@ -30,13 +30,13 @@ cffi==2.0.0
     #   -r requirements/quality.txt
     #   cryptography
     #   pynacl
-chardet==7.4.0.post2
+chardet==7.4.2
     # via diff-cover
-charset-normalizer==3.4.6
+charset-normalizer==3.4.7
     # via
     #   -r requirements/quality.txt
     #   requests
-click==8.3.1
+click==8.3.2
     # via
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
@@ -61,7 +61,7 @@ coverage[toml]==7.13.5
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
-cryptography==46.0.6
+cryptography==46.0.7
     # via
     #   -r requirements/quality.txt
     #   secretstorage
@@ -75,7 +75,7 @@ distlib==0.4.0
     # via
     #   -r requirements/ci.txt
     #   virtualenv
-django==5.2.12
+django==5.2.13
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/quality.txt
@@ -100,7 +100,7 @@ edx-django-utils==8.0.1
     #   edx-rest-api-client
 edx-lint==6.0.0
     # via -r requirements/quality.txt
-edx-rest-api-client==6.2.0
+edx-rest-api-client==7.0.0
     # via -r requirements/quality.txt
 filelock==3.25.2
     # via
@@ -166,7 +166,7 @@ mdurl==0.1.2
     # via
     #   -r requirements/quality.txt
     #   markdown-it-py
-more-itertools==10.8.0
+more-itertools==11.0.2
     # via
     #   -r requirements/quality.txt
     #   jaraco-classes
@@ -188,7 +188,7 @@ packaging==26.0
     #   wheel
 pip-tools==7.5.3
     # via -r requirements/pip-tools.txt
-platformdirs==4.9.4
+platformdirs==4.9.6
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -260,13 +260,13 @@ pyproject-hooks==1.2.0
     #   -r requirements/pip-tools.txt
     #   build
     #   pip-tools
-pytest==9.0.2
+pytest==9.0.3
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
 pytest-cov==7.1.0
     # via -r requirements/quality.txt
-python-discovery==1.2.1
+python-discovery==1.2.2
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -283,7 +283,7 @@ readme-renderer==44.0
     # via
     #   -r requirements/quality.txt
     #   twine
-requests==2.33.0
+requests==2.33.1
     # via
     #   -r requirements/quality.txt
     #   edx-rest-api-client
@@ -297,7 +297,7 @@ rfc3986==2.0.0
     # via
     #   -r requirements/quality.txt
     #   twine
-rich==14.3.3
+rich==15.0.0
     # via
     #   -r requirements/quality.txt
     #   twine
@@ -334,7 +334,7 @@ tomlkit==0.14.0
     # via
     #   -r requirements/quality.txt
     #   pylint
-tox==4.51.0
+tox==4.52.1
     # via -r requirements/ci.txt
 twine==6.2.0
     # via -r requirements/quality.txt
@@ -344,7 +344,7 @@ urllib3==2.6.3
     #   id
     #   requests
     #   twine
-virtualenv==21.2.0
+virtualenv==21.2.1
     # via
     #   -r requirements/ci.txt
     #   tox
