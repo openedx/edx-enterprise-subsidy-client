@@ -8,7 +8,7 @@ asgiref==3.11.1
     # via
     #   -r requirements/base.txt
     #   django
-certifi==2026.2.25
+certifi==2026.4.22
     # via
     #   -r requirements/base.txt
     #   requests
@@ -20,7 +20,7 @@ charset-normalizer==3.4.7
     # via
     #   -r requirements/base.txt
     #   requests
-click==8.3.2
+click==8.3.3
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -47,13 +47,13 @@ edx-django-utils==8.0.1
     #   edx-rest-api-client
 edx-rest-api-client==7.0.0
     # via -r requirements/base.txt
-idna==3.11
+idna==3.13
     # via
     #   -r requirements/base.txt
     #   requests
 iniconfig==2.3.0
     # via pytest
-packaging==26.1
+packaging==26.2
     # via pytest
 pluggy==1.6.0
     # via
