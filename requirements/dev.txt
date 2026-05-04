@@ -13,11 +13,11 @@ astroid==4.0.4
     #   -r requirements/quality.txt
     #   pylint
     #   pylint-celery
-build==1.4.4
+build==1.5.0
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-cachetools==7.0.6
+cachetools==7.1.1
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -98,7 +98,7 @@ edx-django-utils==8.0.1
     # via
     #   -r requirements/quality.txt
     #   edx-rest-api-client
-edx-lint==6.0.0
+edx-lint==6.1.0
     # via -r requirements/quality.txt
 edx-rest-api-client==7.0.0
     # via -r requirements/quality.txt
@@ -333,8 +333,9 @@ tomli-w==1.2.0
 tomlkit==0.14.0
     # via
     #   -r requirements/quality.txt
+    #   edx-lint
     #   pylint
-tox==4.53.0
+tox==4.53.1
     # via -r requirements/ci.txt
 twine==6.2.0
     # via -r requirements/quality.txt
@@ -344,7 +345,7 @@ urllib3==2.6.3
     #   id
     #   requests
     #   twine
-virtualenv==21.2.4
+virtualenv==21.3.0
     # via
     #   -r requirements/ci.txt
     #   tox
