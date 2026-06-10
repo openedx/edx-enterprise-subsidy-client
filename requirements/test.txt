@@ -8,7 +8,7 @@ asgiref==3.11.1
     # via
     #   -r requirements/base.txt
     #   django
-certifi==2026.4.22
+certifi==2026.5.20
     # via
     #   -r requirements/base.txt
     #   requests
@@ -20,13 +20,13 @@ charset-normalizer==3.4.7
     # via
     #   -r requirements/base.txt
     #   requests
-click==8.3.3
+click==8.4.1
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-coverage[toml]==7.13.5
+coverage[toml]==7.14.1
     # via pytest-cov
-django==5.2.13
+django==5.2.15
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.txt
@@ -47,7 +47,7 @@ edx-django-utils==8.0.1
     #   edx-rest-api-client
 edx-rest-api-client==7.0.0
     # via -r requirements/base.txt
-idna==3.13
+idna==3.18
     # via
     #   -r requirements/base.txt
     #   requests
@@ -69,7 +69,7 @@ pycparser==3.0
     #   cffi
 pygments==2.20.0
     # via pytest
-pyjwt==2.12.1
+pyjwt==2.13.0
     # via
     #   -r requirements/base.txt
     #   edx-rest-api-client
@@ -81,7 +81,7 @@ pytest==9.0.3
     # via pytest-cov
 pytest-cov==7.1.0
     # via -r requirements/test.in
-requests==2.33.1
+requests==2.34.2
     # via
     #   -r requirements/base.txt
     #   edx-rest-api-client
@@ -89,11 +89,11 @@ sqlparse==0.5.5
     # via
     #   -r requirements/base.txt
     #   django
-stevedore==5.7.0
+stevedore==5.8.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-urllib3==2.6.3
+urllib3==2.7.0
     # via
     #   -r requirements/base.txt
     #   requests
