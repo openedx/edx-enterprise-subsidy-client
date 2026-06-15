@@ -14,6 +14,14 @@ Change Log
 Unreleased
 **********
 
+[2.2.1]
+*******
+* chore: Bump version to 2.2.1
+
+[2.2.0]
+*******
+* chore: Update Python Requirements
+
 [2.1.1]
 *******
 * build: upgrade pip-tools to version 7.5.3
