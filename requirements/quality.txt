@@ -40,7 +40,7 @@ coverage[toml]==7.14.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-cryptography==48.0.0
+cryptography==49.0.0
     # via secretstorage
 dill==0.4.1
     # via pylint
@@ -145,7 +145,7 @@ pyjwt==2.13.0
     # via
     #   -r requirements/test.txt
     #   edx-rest-api-client
-pylint==4.0.5
+pylint==4.0.6
     # via
     #   edx-lint
     #   pylint-celery
@@ -163,7 +163,7 @@ pynacl==1.6.2
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-pytest==9.0.3
+pytest==9.1.0
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -173,7 +173,7 @@ python-slugify==8.0.4
     # via code-annotations
 pyyaml==6.0.3
     # via code-annotations
-readme-renderer==44.0
+readme-renderer==45.0
     # via twine
 requests==2.34.2
     # via
