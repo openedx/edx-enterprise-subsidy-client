@@ -61,7 +61,7 @@ coverage[toml]==7.14.1
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
-cryptography==48.0.0
+cryptography==49.0.0
     # via
     #   -r requirements/quality.txt
     #   secretstorage
@@ -71,7 +71,7 @@ dill==0.4.1
     # via
     #   -r requirements/quality.txt
     #   pylint
-distlib==0.4.1
+distlib==0.4.3
     # via
     #   -r requirements/ci.txt
     #   virtualenv
@@ -102,7 +102,7 @@ edx-lint==6.1.0
     # via -r requirements/quality.txt
 edx-rest-api-client==7.0.0
     # via -r requirements/quality.txt
-filelock==3.29.1
+filelock==3.29.4
     # via
     #   -r requirements/ci.txt
     #   python-discovery
@@ -227,7 +227,7 @@ pyjwt==2.13.0
     # via
     #   -r requirements/quality.txt
     #   edx-rest-api-client
-pylint==4.0.5
+pylint==4.0.6
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -260,13 +260,13 @@ pyproject-hooks==1.2.0
     #   -r requirements/pip-tools.txt
     #   build
     #   pip-tools
-pytest==9.0.3
+pytest==9.1.0
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
 pytest-cov==7.1.0
     # via -r requirements/quality.txt
-python-discovery==1.4.0
+python-discovery==1.4.2
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -279,7 +279,7 @@ pyyaml==6.0.3
     # via
     #   -r requirements/quality.txt
     #   code-annotations
-readme-renderer==44.0
+readme-renderer==45.0
     # via
     #   -r requirements/quality.txt
     #   twine
@@ -345,7 +345,7 @@ urllib3==2.7.0
     #   id
     #   requests
     #   twine
-virtualenv==21.4.2
+virtualenv==21.5.0
     # via
     #   -r requirements/ci.txt
     #   tox
