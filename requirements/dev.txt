@@ -36,7 +36,7 @@ charset-normalizer==3.4.7
     # via
     #   -r requirements/quality.txt
     #   requests
-click==8.4.1
+click==8.4.2
     # via
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
@@ -57,7 +57,7 @@ colorama==0.4.6
     # via
     #   -r requirements/ci.txt
     #   tox
-coverage[toml]==7.14.2
+coverage[toml]==7.15.0
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -102,7 +102,7 @@ edx-lint==6.1.0
     # via -r requirements/quality.txt
 edx-rest-api-client==7.0.0
     # via -r requirements/quality.txt
-filelock==3.29.4
+filelock==3.29.5
     # via
     #   -r requirements/ci.txt
     #   python-discovery
@@ -266,7 +266,7 @@ pytest==9.1.1
     #   pytest-cov
 pytest-cov==7.1.0
     # via -r requirements/quality.txt
-python-discovery==1.4.2
+python-discovery==1.4.3
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -317,7 +317,7 @@ sqlparse==0.5.5
     # via
     #   -r requirements/quality.txt
     #   django
-stevedore==5.8.0
+stevedore==5.9.0
     # via
     #   -r requirements/quality.txt
     #   code-annotations
@@ -335,7 +335,7 @@ tomlkit==0.15.0
     #   -r requirements/quality.txt
     #   edx-lint
     #   pylint
-tox==4.55.1
+tox==4.56.1
     # via -r requirements/ci.txt
 twine==6.2.0
     # via -r requirements/quality.txt
