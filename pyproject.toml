@@ -82,6 +82,11 @@ local_scheme = "no-local-version"
 fallback_version = "0.0.0.dev0"
 
 [tool.semantic_release]
+# This repo's ~35 existing release tags are bare version numbers (e.g. "2.2.1"),
+# not the "v{version}" python-semantic-release defaults to. Without this,
+# semantic-release wouldn't recognize any prior release and would restart
+# versioning from scratch on the next release.
+tag_format = "{version}"
 build_command = "pip install build && SETUPTOOLS_SCM_PRETEND_VERSION=$NEW_VERSION python -m build"
 
 [tool.uv]
