@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-asgiref==3.11.1
+asgiref==3.12.1
     # via
     #   -r requirements/quality.txt
     #   django
@@ -13,7 +13,7 @@ astroid==4.0.4
     #   -r requirements/quality.txt
     #   pylint
     #   pylint-celery
-build==1.5.1
+build==1.5.0
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
@@ -57,7 +57,7 @@ colorama==0.4.6
     # via
     #   -r requirements/ci.txt
     #   tox
-coverage[toml]==7.15.1
+coverage[toml]==7.15.2
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -102,7 +102,7 @@ edx-lint==6.1.0
     # via -r requirements/quality.txt
 edx-rest-api-client==7.0.0
     # via -r requirements/quality.txt
-filelock==3.29.7
+filelock==3.31.0
     # via
     #   -r requirements/ci.txt
     #   python-discovery
@@ -132,7 +132,7 @@ jaraco-context==6.1.2
     # via
     #   -r requirements/quality.txt
     #   keyring
-jaraco-functools==4.5.0
+jaraco-functools==4.6.0
     # via
     #   -r requirements/quality.txt
     #   keyring
@@ -186,9 +186,9 @@ packaging==26.2
     #   tox
     #   twine
     #   wheel
-pip-tools==7.5.3
+pip-tools==7.6.0
     # via -r requirements/pip-tools.txt
-platformdirs==4.10.0
+platformdirs==4.10.1
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -330,12 +330,12 @@ tomli-w==1.2.0
     # via
     #   -r requirements/ci.txt
     #   tox
-tomlkit==0.15.0
+tomlkit==0.15.1
     # via
     #   -r requirements/quality.txt
     #   edx-lint
     #   pylint
-tox==4.56.4
+tox==4.57.0
     # via -r requirements/ci.txt
 twine==6.2.0
     # via -r requirements/quality.txt
