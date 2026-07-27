@@ -14,6 +14,10 @@ Change Log
 Unreleased
 **********
 
+[2.2.2]
+*******
+* chore: Bump version to 2.2.2
+
 [2.2.1]
 *******
 * chore: Bump version to 2.2.1
