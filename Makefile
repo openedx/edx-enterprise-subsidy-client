@@ -25,7 +25,12 @@ coverage: clean ## generate and view HTML coverage report
 	$(BROWSER)htmlcov/index.html
 
 docs: ## generate Sphinx HTML documentation, including API docs
-	uv run tox -e docs
+	uv sync --group doc
+	uv run doc8 --ignore-path docs/_build README.rst docs
+	rm -f docs/edx_enterprise_subsidy_client.rst
+	rm -f docs/modules.rst
+	SPHINXOPTS="-W" uv run make -e -C docs clean
+	SPHINXOPTS="-W" uv run make -e -C docs html
 	$(BROWSER)docs/_build/html/index.html
 
 compile-requirements: ## generate the uv.lock file without upgrading packages
