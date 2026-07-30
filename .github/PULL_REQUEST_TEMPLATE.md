@@ -11,7 +11,4 @@ Add some testing instructions, if applicable.
 - [ ] Commits are squashed
 
 **Post merge:**
-- [ ] Create a tag
-- [ ] Check new version is pushed to PyPI after tag-triggered build is 
-      finished.
 - [ ] Delete working branch (if not needed anymore)
