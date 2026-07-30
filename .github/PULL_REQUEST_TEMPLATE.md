@@ -8,8 +8,6 @@ Add some testing instructions, if applicable.
 **Merge checklist:**
 - [ ] All reviewers approved
 - [ ] CI build is green
-- [ ] Version bumped
-- [ ] Changelog record added
 - [ ] Commits are squashed
 
 **Post merge:**
