@@ -82,7 +82,7 @@ exclude = ["*tests*"]
 [tool.setuptools_scm]
 version_scheme = "only-version"
 local_scheme = "no-local-version"
-fallback_version = "0.0.0.dev0"
+fallback_version = "0.0.0"
 
 [tool.semantic_release]
 # This repo's ~35 existing release tags are bare version numbers (e.g. "2.2.1"),
