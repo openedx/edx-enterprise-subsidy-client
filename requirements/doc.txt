@@ -24,7 +24,7 @@ certifi==2026.7.22
     # via
     #   -r requirements/test.txt
     #   requests
-cffi==2.1.0
+cffi==2.1.1
     # via
     #   -r requirements/test.txt
     #   cryptography
@@ -37,13 +37,13 @@ click==8.4.2
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-coverage[toml]==7.15.3
+coverage[toml]==7.15.4
     # via
     #   -r requirements/test.txt
     #   pytest-cov
 cryptography==50.0.0
     # via secretstorage
-django==5.2.16
+django==5.2.17
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/test.txt
@@ -113,7 +113,7 @@ more-itertools==11.1.0
     #   jaraco-functools
 nh3==0.3.6
     # via readme-renderer
-packaging==26.2
+packaging==26.3
     # via
     #   -r requirements/test.txt
     #   build
@@ -185,7 +185,7 @@ secretstorage==3.5.0
     # via keyring
 snowballstemmer==3.1.1
     # via sphinx
-soupsieve==2.9.1
+soupsieve==2.9.2
     # via beautifulsoup4
 sphinx==9.1.0
     # via
