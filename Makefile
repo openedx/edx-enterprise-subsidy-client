@@ -1,4 +1,4 @@
-.PHONY: clean compile_translations coverage diff_cover docs dummy_translations \
+.PHONY: clean compile-requirements compile_translations coverage diff_cover docs dummy_translations \
         extract_translations fake_translations help \
         quality requirements selfcheck test test-all upgrade validate
 
@@ -25,44 +25,37 @@ coverage: clean ## generate and view HTML coverage report
 	$(BROWSER)htmlcov/index.html
 
 docs: ## generate Sphinx HTML documentation, including API docs
-	tox -e docs
+	uv sync --group doc
+	uv run doc8 --ignore-path docs/_build README.rst docs
+	rm -f docs/edx_enterprise_subsidy_client.rst
+	rm -f docs/modules.rst
+	SPHINXOPTS="-W" uv run make -e -C docs clean
+	SPHINXOPTS="-W" uv run make -e -C docs html
 	$(BROWSER)docs/_build/html/index.html
 
-# Define PIP_COMPILE_OPTS=-v to get more information during make upgrade.
-PIP_COMPILE = pip-compile --upgrade $(PIP_COMPILE_OPTS)
+compile-requirements: ## generate the uv.lock file without upgrading packages
+	uv lock
 
-upgrade: export CUSTOM_COMPILE_COMMAND=make upgrade
-upgrade: ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
-	pip install -r requirements/pip-tools.txt
-	# Make sure to compile files after any other files they include!
-	$(PIP_COMPILE) --allow-unsafe --rebuild -o requirements/pip.txt requirements/pip.in
-	$(PIP_COMPILE) -o requirements/pip-tools.txt requirements/pip-tools.in
-	pip install -r requirements/pip-tools.txt
-	$(PIP_COMPILE) -o requirements/base.txt requirements/base.in
-	$(PIP_COMPILE) -o requirements/test.txt requirements/test.in
-	$(PIP_COMPILE) -o requirements/doc.txt requirements/doc.in
-	$(PIP_COMPILE) -o requirements/quality.txt requirements/quality.in
-	$(PIP_COMPILE) -o requirements/ci.txt requirements/ci.in
-	$(PIP_COMPILE) -o requirements/dev.txt requirements/dev.in
+upgrade: ## upgrade all packages in uv.lock and sync constraints from edx-lint
+	uv run --with edx-lint edx_lint write_uv_constraints pyproject.toml
+	uv lock --upgrade
 
 quality: ## check coding style with pycodestyle and pylint
 	touch tests/__init__.py
-	pylint edx_enterprise_subsidy_client tests test_utils manage.py *.py
+	pylint src/edx_enterprise_subsidy_client tests test_utils manage.py *.py
 	rm tests/__init__.py
-	pycodestyle edx_enterprise_subsidy_client tests  *.py
-	isort --check-only --diff --recursive tests test_utils edx_enterprise_subsidy_client *.py test_settings.py
-	python setup.py bdist_wheel
+	pycodestyle src/edx_enterprise_subsidy_client tests  *.py
+	isort --check-only --diff --recursive tests test_utils src/edx_enterprise_subsidy_client *.py test_settings.py
+	python -m build --wheel
 	twine check dist/*
 	make selfcheck
 
 pylint:
 	touch tests/__init__.py
-	pylint edx_enterprise_subsidy_client tests test_utils manage.py *.py
+	pylint src/edx_enterprise_subsidy_client tests test_utils manage.py *.py
 
 requirements: ## install development environment requirements
-	pip install -r requirements/pip.txt
-	pip install -r requirements/pip-tools.txt
-	pip-sync requirements/dev.txt requirements/private.*
+	uv sync --group dev
 
 test: clean ## run tests in the current virtualenv
 	DJANGO_SETTINGS_MODULE=test_settings pytest
@@ -71,18 +64,18 @@ diff_cover: test ## find diff lines that need test coverage
 	diff-cover coverage.xml
 
 test-all: quality ## run tests on every supported Python/Django combination
-	tox
+	uv run tox
 
 validate: quality test ## run tests and quality checks
 
 isort-check:
-	isort --check-only --diff --recursive tests test_utils edx_enterprise_subsidy_client *.py test_settings.py
+	isort --check-only --diff --recursive tests test_utils src/edx_enterprise_subsidy_client *.py test_settings.py
 
 isort:
-	isort --recursive tests test_utils edx_enterprise_subsidy_client *.py test_settings.py
+	isort --recursive tests test_utils src/edx_enterprise_subsidy_client *.py test_settings.py
 
 isort-fix:
-	isort --recursive tests test_utils edx_enterprise_subsidy_client *.py test_settings.py
+	isort --recursive tests test_utils src/edx_enterprise_subsidy_client *.py test_settings.py
 
 selfcheck: ## check that the Makefile is well-formed
 	@echo "The Makefile is well-formed."

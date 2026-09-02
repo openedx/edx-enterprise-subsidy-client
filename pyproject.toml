@@ -1,0 +1,142 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm>8.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "edx-enterprise-subsidy-client"
+description = "Client for interacting with the enterprise-subsidy service."
+requires-python = ">=3.12"
+license = "AGPL-3.0-or-later"
+authors = [
+    {name = "edX", email = "oscm@edx.org"},
+]
+classifiers = [
+    'Development Status :: 3 - Alpha',
+    'Framework :: Django',
+    'Framework :: Django :: 5.2',
+    'Intended Audience :: Developers',
+    'Natural Language :: English',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.12',
+]
+keywords = [
+    "Python",
+    "edx",
+]
+
+dynamic = ["readme", "version"]
+
+dependencies = [
+    "edx-rest-api-client",
+]
+
+[project.urls]
+Homepage = "https://github.com/openedx/edx-enterprise-subsidy-client"
+Repository = "https://github.com/openedx/edx-enterprise-subsidy-client"
+
+[dependency-groups]
+test-base = [
+    "pytest-cov",
+]
+test = [
+    {include-group = "test-base"},
+]
+quality = [
+    {include-group = "test"},
+    "edx-lint",
+    "isort",
+    "pycodestyle",
+    "pydocstyle",
+    "twine",
+    "build",
+]
+doc = [
+    {include-group = "test"},
+    "doc8",
+    "sphinx-book-theme",
+    "twine",
+    "build",
+    "Sphinx",
+]
+ci = [
+    "tox",
+    "tox-uv",
+]
+dev = [
+    {include-group = "quality"},
+    {include-group = "ci"},
+    "diff-cover",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+readme = {file = ["README.rst"], content-type = "text/x-rst"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["edx_enterprise_subsidy_client*"]
+exclude = ["*tests*"]
+
+[tool.setuptools_scm]
+version_scheme = "only-version"
+local_scheme = "no-local-version"
+fallback_version = "0.0.0"
+
+[tool.semantic_release]
+# This repo's ~35 existing release tags are bare version numbers (e.g. "2.2.1"),
+# not the "v{version}" python-semantic-release defaults to. Without this,
+# semantic-release wouldn't recognize any prior release and would restart
+# versioning from scratch on the next release.
+tag_format = "{version}"
+build_command = "pip install build && SETUPTOOLS_SCM_PRETEND_VERSION=$NEW_VERSION python -m build"
+# Already past 1.0 (2.x), so major_on_zero is a no-op today -- it only governs
+# the 0.x -> 1.0.0 transition, not 1.x -> 2.0.0. Set for consistency across the
+# batch and so this repo never auto-jumps to 1.0.0 if it's ever reset to 0.x.
+major_on_zero = false
+allow_zero_version = true
+
+[tool.uv]
+package = true
+# Every `uv sync`/`uv run` invocation in this repo names an explicit --group.
+# Without this, uv's implicit default group (named "dev") would be synced *in
+# addition* to whatever --group is passed, silently pulling the entire
+# dev/test/quality/ci superset into every target, defeating the point of
+# having separate groups.
+default-groups = []
+#  DO NOT EDIT constraint-dependencies DIRECTLY.
+#  This list is managed by `edx_lint write_uv_constraints`
+#  and will be overwritten the next time `make upgrade` is run.
+#  - GLOBAL constraints: edit edx_lint/files/common_constraints.txt
+#  - REPO-SPECIFIC constraints: edit [tool.edx_lint].uv_constraints in this file
+constraint-dependencies = [
+    "Django<6.0",
+    "elasticsearch<7.14.0",
+]
+
+[tool.edx_lint]
+uv_constraints = []
+
+[tool.isort]
+indent = '    '
+line_length = 120
+multi_line_output = 3
+include_trailing_comma = true
+skip = ["migrations"]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "test_settings"
+addopts = "--cov edx_enterprise_subsidy_client --cov-report term-missing --cov-report xml"
+norecursedirs = [".*", "docs", "requirements", "site-packages"]
+
+[tool.coverage.run]
+branch = true
+source_pkgs = ["edx_enterprise_subsidy_client"]
+omit = ["test_settings"]
+
+[tool.coverage.html]
+directory = "build/coverage/html"
+
+[tool.coverage.xml]
+output = "build/coverage/coverage.xml"
