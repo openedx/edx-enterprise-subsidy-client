@@ -27,6 +27,7 @@ certifi==2026.7.22
 cffi==2.1.1
     # via
     #   -r requirements/test.txt
+    #   cryptography
     #   pynacl
 charset-normalizer==3.5.1
     # via
@@ -40,6 +41,8 @@ coverage[toml]==7.16.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
+cryptography==50.0.1
+    # via secretstorage
 django==5.2.17
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
@@ -88,6 +91,10 @@ jaraco-context==6.1.2
     # via keyring
 jaraco-functools==4.6.0
     # via keyring
+jeepney==0.9.0
+    # via
+    #   keyring
+    #   secretstorage
 jinja2==3.1.6
     # via
     #   pydata-sphinx-theme
@@ -174,6 +181,8 @@ rich==15.0.0
     # via twine
 roman-numerals==4.1.0
     # via sphinx
+secretstorage==3.5.0
+    # via keyring
 snowballstemmer==3.1.1
     # via sphinx
 soupsieve==2.9.2
