@@ -33,7 +33,7 @@ PIP_COMPILE = pip-compile --upgrade $(PIP_COMPILE_OPTS)
 
 upgrade: export CUSTOM_COMPILE_COMMAND=make upgrade
 upgrade: ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
-	pip install -r requirements/pip-tools.txt
+	pip install -q -r requirements/pip.txt -r requirements/pip-tools.txt -c requirements/constraints.txt
 	# Make sure to compile files after any other files they include!
 	$(PIP_COMPILE) --allow-unsafe --rebuild -o requirements/pip.txt requirements/pip.in
 	$(PIP_COMPILE) -o requirements/pip-tools.txt requirements/pip-tools.in
@@ -50,7 +50,7 @@ quality: ## check coding style with pycodestyle and pylint
 	pylint edx_enterprise_subsidy_client tests test_utils manage.py *.py
 	rm tests/__init__.py
 	pycodestyle edx_enterprise_subsidy_client tests  *.py
-	isort --check-only --diff --recursive tests test_utils edx_enterprise_subsidy_client *.py test_settings.py
+	isort --check-only --diff tests test_utils edx_enterprise_subsidy_client *.py test_settings.py
 	python setup.py bdist_wheel
 	twine check dist/*
 	make selfcheck
@@ -76,13 +76,13 @@ test-all: quality ## run tests on every supported Python/Django combination
 validate: quality test ## run tests and quality checks
 
 isort-check:
-	isort --check-only --diff --recursive tests test_utils edx_enterprise_subsidy_client *.py test_settings.py
+	isort --check-only --diff tests test_utils edx_enterprise_subsidy_client *.py test_settings.py
 
 isort:
-	isort --recursive tests test_utils edx_enterprise_subsidy_client *.py test_settings.py
+	isort tests test_utils edx_enterprise_subsidy_client *.py test_settings.py
 
 isort-fix:
-	isort --recursive tests test_utils edx_enterprise_subsidy_client *.py test_settings.py
+	isort tests test_utils edx_enterprise_subsidy_client *.py test_settings.py
 
 selfcheck: ## check that the Makefile is well-formed
 	@echo "The Makefile is well-formed."
