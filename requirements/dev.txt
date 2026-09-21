@@ -28,6 +28,7 @@ certifi==2026.7.22
 cffi==2.1.1
     # via
     #   -r requirements/quality.txt
+    #   cryptography
     #   pynacl
 chardet==7.6.0
     # via diff-cover
@@ -60,6 +61,10 @@ coverage[toml]==7.16.1
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
+cryptography==50.0.1
+    # via
+    #   -r requirements/quality.txt
+    #   secretstorage
 diff-cover==10.5.1
     # via -r requirements/dev.in
 dill==0.4.1
@@ -131,6 +136,11 @@ jaraco-functools==4.6.0
     # via
     #   -r requirements/quality.txt
     #   keyring
+jeepney==0.9.0
+    # via
+    #   -r requirements/quality.txt
+    #   keyring
+    #   secretstorage
 jinja2==3.1.6
     # via
     #   -r requirements/quality.txt
@@ -182,7 +192,7 @@ packaging==26.3
     #   wheel
 pip-tools==7.6.1
     # via -r requirements/pip-tools.txt
-platformdirs==4.11.9
+platformdirs==4.11.11
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -244,7 +254,7 @@ pynacl==1.6.2
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
-pyproject-api==1.11.1
+pyproject-api==1.11.2
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -259,12 +269,12 @@ pytest==9.1.1
     #   pytest-cov
 pytest-cov==7.1.0
     # via -r requirements/quality.txt
-python-discovery==1.6.0
+python-discovery==1.6.1
     # via
     #   -r requirements/ci.txt
     #   tox
     #   virtualenv
-python-slugify==9.0.0
+python-slugify==9.1.0
     # via
     #   -r requirements/quality.txt
     #   code-annotations
@@ -294,6 +304,10 @@ rich==15.0.0
     # via
     #   -r requirements/quality.txt
     #   twine
+secretstorage==3.5.0
+    # via
+    #   -r requirements/quality.txt
+    #   keyring
 six==1.17.0
     # via
     #   -r requirements/quality.txt
@@ -324,7 +338,7 @@ tomlkit==0.15.1
     #   -r requirements/quality.txt
     #   edx-lint
     #   pylint
-tox==4.61.5
+tox==4.63.0
     # via -r requirements/ci.txt
 twine==7.0.0
     # via -r requirements/quality.txt
@@ -338,7 +352,7 @@ urllib3==2.8.0
     #   id
     #   requests
     #   twine
-virtualenv==21.7.10
+virtualenv==21.9.0
     # via
     #   -r requirements/ci.txt
     #   tox
