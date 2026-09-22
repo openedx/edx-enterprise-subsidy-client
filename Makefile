@@ -30,7 +30,7 @@ docs: ## generate Sphinx HTML documentation, including API docs
 	rm -f docs/edx_enterprise_subsidy_client.rst
 	rm -f docs/modules.rst
 	SPHINXOPTS="-W" uv run make -e -C docs clean
-	SPHINXOPTS="-W" uv run make -e -C docs html
+	DJANGO_SETTINGS_MODULE=test_settings SPHINXOPTS="-W" uv run make -e -C docs html
 	$(BROWSER)docs/_build/html/index.html
 
 compile-requirements: ## generate the uv.lock file without upgrading packages
