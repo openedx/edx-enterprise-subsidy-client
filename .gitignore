@@ -63,6 +63,7 @@ requirements/private.txt
 
 # virtualenv
 venv/
+.venv/
 
 # Editor temp files, etc.
 *~
