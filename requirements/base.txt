@@ -26,7 +26,7 @@ django-waffle==5.0.0
     # via edx-django-utils
 edx-django-utils==8.0.2
     # via edx-rest-api-client
-edx-rest-api-client==7.0.0
+edx-rest-api-client==7.1.0
     # via -r requirements/base.in
 idna==3.20
     # via requests
@@ -34,7 +34,7 @@ psutil==7.2.2
     # via edx-django-utils
 pycparser==3.0
     # via cffi
-pyjwt==2.14.0
+pyjwt==2.15.0
     # via edx-rest-api-client
 pynacl==1.6.2
     # via edx-django-utils

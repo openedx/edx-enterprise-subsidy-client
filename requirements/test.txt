@@ -24,7 +24,7 @@ click==8.5.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-coverage[toml]==7.16.1
+coverage[toml]==7.16.2
     # via pytest-cov
 django==5.2.17
     # via
@@ -45,7 +45,7 @@ edx-django-utils==8.0.2
     # via
     #   -r requirements/base.txt
     #   edx-rest-api-client
-edx-rest-api-client==7.0.0
+edx-rest-api-client==7.1.0
     # via -r requirements/base.txt
 idna==3.20
     # via
@@ -69,7 +69,7 @@ pycparser==3.0
     #   cffi
 pygments==2.21.0
     # via pytest
-pyjwt==2.14.0
+pyjwt==2.15.0
     # via
     #   -r requirements/base.txt
     #   edx-rest-api-client

@@ -19,6 +19,7 @@ certifi==2026.7.22
 cffi==2.1.1
     # via
     #   -r requirements/test.txt
+    #   cryptography
     #   pynacl
 charset-normalizer==3.5.1
     # via
@@ -35,10 +36,12 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==3.0.0
     # via edx-lint
-coverage[toml]==7.16.1
+coverage[toml]==7.16.2
     # via
     #   -r requirements/test.txt
     #   pytest-cov
+cryptography==50.0.1
+    # via secretstorage
 dill==0.4.1
     # via pylint
 django==5.2.17
@@ -64,7 +67,7 @@ edx-django-utils==8.0.2
     #   edx-rest-api-client
 edx-lint==6.2.0
     # via -r requirements/quality.in
-edx-rest-api-client==7.0.0
+edx-rest-api-client==7.1.0
     # via -r requirements/test.txt
 id==1.6.1
     # via twine
@@ -86,6 +89,10 @@ jaraco-context==6.1.2
     # via keyring
 jaraco-functools==4.6.0
     # via keyring
+jeepney==0.9.0
+    # via
+    #   keyring
+    #   secretstorage
 jinja2==3.1.6
     # via code-annotations
 keyring==25.7.0
@@ -111,7 +118,7 @@ packaging==26.3
     #   -r requirements/test.txt
     #   pytest
     #   twine
-platformdirs==4.11.9
+platformdirs==4.12.0
     # via pylint
 pluggy==1.6.0
     # via
@@ -122,7 +129,7 @@ psutil==7.2.2
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-pycodestyle==2.14.0
+pycodestyle==2.15.0
     # via -r requirements/quality.in
 pycparser==3.0
     # via
@@ -136,11 +143,11 @@ pygments==2.21.0
     #   pytest
     #   readme-renderer
     #   rich
-pyjwt==2.14.0
+pyjwt==2.15.0
     # via
     #   -r requirements/test.txt
     #   edx-rest-api-client
-pylint==4.0.8
+pylint==4.0.9
     # via
     #   edx-lint
     #   pylint-celery
@@ -164,7 +171,7 @@ pytest==9.1.1
     #   pytest-cov
 pytest-cov==7.1.0
     # via -r requirements/test.txt
-python-slugify==9.0.0
+python-slugify==9.1.2
     # via code-annotations
 pyyaml==6.0.3
     # via code-annotations
@@ -182,6 +189,8 @@ rfc3986==2.0.0
     # via twine
 rich==15.0.0
     # via twine
+secretstorage==3.5.0
+    # via keyring
 six==1.17.0
     # via edx-lint
 snowballstemmer==3.1.1

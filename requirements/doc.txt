@@ -27,6 +27,7 @@ certifi==2026.7.22
 cffi==2.1.1
     # via
     #   -r requirements/test.txt
+    #   cryptography
     #   pynacl
 charset-normalizer==3.5.1
     # via
@@ -36,10 +37,12 @@ click==8.5.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-coverage[toml]==7.16.1
+coverage[toml]==7.16.2
     # via
     #   -r requirements/test.txt
     #   pytest-cov
+cryptography==50.0.1
+    # via secretstorage
 django==5.2.17
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
@@ -68,7 +71,7 @@ edx-django-utils==8.0.2
     # via
     #   -r requirements/test.txt
     #   edx-rest-api-client
-edx-rest-api-client==7.0.0
+edx-rest-api-client==7.1.0
     # via -r requirements/test.txt
 id==1.6.1
     # via twine
@@ -88,6 +91,10 @@ jaraco-context==6.1.2
     # via keyring
 jaraco-functools==4.6.0
     # via keyring
+jeepney==0.9.0
+    # via
+    #   keyring
+    #   secretstorage
 jinja2==3.1.6
     # via
     #   pydata-sphinx-theme
@@ -138,7 +145,7 @@ pygments==2.21.0
     #   readme-renderer
     #   rich
     #   sphinx
-pyjwt==2.14.0
+pyjwt==2.15.0
     # via
     #   -r requirements/test.txt
     #   edx-rest-api-client
@@ -174,9 +181,11 @@ rich==15.0.0
     # via twine
 roman-numerals==4.1.0
     # via sphinx
+secretstorage==3.5.0
+    # via keyring
 snowballstemmer==3.1.1
     # via sphinx
-soupsieve==2.9.2
+soupsieve==2.10
     # via beautifulsoup4
 sphinx==9.1.0
     # via
