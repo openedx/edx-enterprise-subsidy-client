@@ -28,6 +28,7 @@ One Time Setup
   # Install uv: https://docs.astral.sh/uv/getting-started/installation/
   # This creates and manages its own virtualenv, no need to set one up yourself.
   make requirements
+  source .venv/bin/activate
 
   # Ensure things are looking ok by running tests
   make test
@@ -46,6 +47,7 @@ Every time you develop something in this repo
 
   # Install/update the dev requirements into this repo's own uv-managed .venv
   make requirements
+  source .venv/bin/activate
 
   # Run the tests and quality checks (to verify the status before you make any changes)
   make validate

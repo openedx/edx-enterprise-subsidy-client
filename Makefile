@@ -25,7 +25,6 @@ coverage: clean ## generate and view HTML coverage report
 	$(BROWSER)htmlcov/index.html
 
 docs: ## generate Sphinx HTML documentation, including API docs
-	uv sync --group doc
 	doc8 --ignore-path docs/_build README.rst docs
 	rm -f docs/edx_enterprise_subsidy_client.rst
 	rm -f docs/modules.rst
