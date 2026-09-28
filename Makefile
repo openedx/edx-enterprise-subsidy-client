@@ -26,11 +26,11 @@ coverage: clean ## generate and view HTML coverage report
 
 docs: ## generate Sphinx HTML documentation, including API docs
 	uv sync --group doc
-	uv run doc8 --ignore-path docs/_build README.rst docs
+	doc8 --ignore-path docs/_build README.rst docs
 	rm -f docs/edx_enterprise_subsidy_client.rst
 	rm -f docs/modules.rst
-	SPHINXOPTS="-W" uv run make -e -C docs clean
-	DJANGO_SETTINGS_MODULE=test_settings SPHINXOPTS="-W" uv run make -e -C docs html
+	SPHINXOPTS="-W" make -e -C docs clean
+	DJANGO_SETTINGS_MODULE=test_settings SPHINXOPTS="-W" make -e -C docs html
 	$(BROWSER)docs/_build/html/index.html
 
 compile-requirements: ## generate the uv.lock file without upgrading packages
@@ -64,7 +64,7 @@ diff_cover: test ## find diff lines that need test coverage
 	diff-cover coverage.xml
 
 test-all: quality ## run tests on every supported Python/Django combination
-	uv run tox
+	tox
 
 validate: quality test ## run tests and quality checks
 
