@@ -1,3 +1,7 @@
+.. DEPRECATED: This changelog is no longer maintained. Release notes are
+   published only on the GitHub Releases page:
+   https://github.com/openedx/edx-enterprise-subsidy-client/releases
+
 Change Log
 ##########
 
@@ -13,10 +17,6 @@ Change Log
 
 Unreleased
 **********
-
-[2.2.2]
-*******
-* chore: Bump version to 2.2.2
 
 [2.2.1]
 *******

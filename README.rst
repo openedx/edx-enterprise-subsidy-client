@@ -25,12 +25,10 @@ One Time Setup
   cd [DEVSTACK]/enterprise-subsidy && make app-shell
   cd /edx/src/edx-enterprise-subsidy-client
 
-  # Set up a virtualenv in a ``venv/`` directory
-  # You might need to install virtualenv first:
-  # apt-get update
-  # apt-get install -y virtualenv
-  virtualenv venv/
+  # Install uv: https://docs.astral.sh/uv/getting-started/installation/
+  # This creates and manages its own virtualenv, no need to set one up yourself.
   make requirements
+  source .venv/bin/activate
 
   # Ensure things are looking ok by running tests
   make test
@@ -47,11 +45,9 @@ Every time you develop something in this repo
   cd [DEVSTACK]/enterprise-subsidy && make app-shell
   cd /edx/src/edx-enterprise-subsidy-client
 
-  # Activate the virtualenv
-  source venv/bin/activate
-
-  # Install/update the dev requirements
+  # Install/update the dev requirements into this repo's own uv-managed .venv
   make requirements
+  source .venv/bin/activate
 
   # Run the tests and quality checks (to verify the status before you make any changes)
   make validate

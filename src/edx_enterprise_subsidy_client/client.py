@@ -87,7 +87,8 @@ class EnterpriseSubsidyAPIClient:
             subsidy_uuid (str): Subsidy record UUID
             policy_uuid (string): Optional param to filter subsidy aggregate data by subsidy access policy UUID
         Returns:
-            json subsidy learner aggregate data response:
+            json subsidy learner aggregate data response::
+
                 [{
                     'lms_user_id': '1337',
                     'enrollment_count': 45,
@@ -120,7 +121,8 @@ class EnterpriseSubsidyAPIClient:
             enterprise_customer_uuid (str): Enterprise customer UUID
             content_identifier (str): Either content key or UUID for the associated content to be fetched
         Returns:
-            json subsidy content data response:
+            json subsidy content data response::
+
                 {
                     'content_uuid': '484ad134-8004-43b3-ad56-b57c83e4ba24',
                     'content_key': 'edX+DemoX',
@@ -150,27 +152,26 @@ class EnterpriseSubsidyAPIClient:
         Args:
             enterprise_customer_uuid (str): Enterprise customer UUID
         Returns:
-            Paginated response of serialized Subsidy records:
-            ```
-            {
-                "count": 123,
-                "next": "http://api.example.org/accounts/?page=4",
-                "previous": "http://api.example.org/accounts/?page=2",
-                "results": [
-                  {
-                    "uuid": "095be615-a8ad-4c33-8e9c-c7612fbf6c9f",
-                    "title": "string",
-                    "enterprise_customer_uuid": "fdfda46b-94d9-42dc-a755-6e2ed472a413",
-                    "active_datetime": "2019-08-24T14:15:22Z",
-                    "expiration_datetime": "2019-08-24T14:15:22Z",
-                    "unit": "usd_cents",
-                    "reference_id": "string",
-                    "reference_type": "opportunity_product_id",
-                    "current_balance": "string"
+            Paginated response of serialized Subsidy records::
+
+                {
+                    "count": 123,
+                    "next": "http://api.example.org/accounts/?page=4",
+                    "previous": "http://api.example.org/accounts/?page=2",
+                    "results": [
+                      {
+                        "uuid": "095be615-a8ad-4c33-8e9c-c7612fbf6c9f",
+                        "title": "string",
+                        "enterprise_customer_uuid": "fdfda46b-94d9-42dc-a755-6e2ed472a413",
+                        "active_datetime": "2019-08-24T14:15:22Z",
+                        "expiration_datetime": "2019-08-24T14:15:22Z",
+                        "unit": "usd_cents",
+                        "reference_id": "string",
+                        "reference_type": "opportunity_product_id",
+                        "current_balance": "string"
+                      }
+                    ]
                   }
-                ]
-              }
-            ```
         """
         query_params = {'enterprise_customer_uuid': enterprise_customer_uuid}
         query_params.update(kwargs)
